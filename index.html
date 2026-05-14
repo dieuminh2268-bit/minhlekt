@@ -1,0 +1,2441 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KetoanAI | Trợ lý AI hỗ trợ kế toán tổng hợp</title>
+    <meta name="description" content="KetoanAI là dự án portfolio về AI workflow hỗ trợ kế toán tổng hợp, thuế, kiểm soát chứng từ, đối chiếu số liệu và rà soát BCTC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260513-8">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Mở menu</span>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <span class="brand-mark">KA</span>
+        <div>
+          <strong>KetoanAI</strong>
+          <span>AI workflow kế toán</span>
+        </div>
+      </div>
+
+      <nav aria-label="Điều hướng nội dung">
+        <p>Tổng Quan</p>
+        <a href="#overview">Giới thiệu dự án</a>
+        <a href="#problem">Vấn đề kế toán</a>
+        <a href="#support">Năng lực hỗ trợ</a>
+        <a href="#workflow">KetoanAI workflow</a>
+        <p>Hệ Thống</p>
+        <a href="#skills">AI skill map</a>
+        <a href="#cases">Case demo library</a>
+      </nav>
+
+        <div class="sidebar-case-filters" aria-label="Bộ lọc case demo">
+          <button class="filter-button active" type="button" data-filter="all">Tất cả</button>
+          <button class="filter-button" type="button" data-filter="voucher-tax-control">Chứng từ & Thuế</button>
+          <button class="filter-button" type="button" data-filter="exam-thinking-control">Định khoản</button>
+          <button class="filter-button" type="button" data-filter="software-filing-control">Phần mềm & Tờ khai</button>
+          <button class="filter-button" type="button" data-filter="debt-aging-control">Công nợ & Aging</button>
+          <button class="filter-button" type="button" data-filter="inventory-asset-control">Tồn kho, TSCĐ & 242</button>
+          <button class="filter-button" type="button" data-filter="payroll-control">Lương & BHXH/TNCN</button>
+          <button class="filter-button" type="button" data-filter="reconciliation-error-control">Đối chiếu & Sửa lỗi</button>
+          <button class="filter-button" type="button" data-filter="closing-reporting-control">Khóa sổ & BCTC</button>
+          <button class="filter-button" type="button" data-filter="legal-control">Pháp lý</button>
+        </div>
+
+      <nav aria-label="Điều hướng liên hệ">
+        <p>Liên Hệ</p>
+        <a href="#contact">Về ứng viên</a>
+      </nav>
+    </aside>
+
+    <div class="sidebar-overlay" aria-hidden="true"></div>
+
+    <main id="main" class="page-shell">
+      <section id="overview" class="section hero-section">
+        <div class="hero-layout">
+          <div>
+            <span class="eyebrow">Dự án cá nhân</span>
+            <h1>KetoanAI</h1>
+            <p class="hero-copy">Hệ thống AI workflow hỗ trợ chuẩn hóa kiểm soát chứng từ, rà rủi ro thuế, đối chiếu số liệu và rút ngắn quá trình khóa sổ cho kế toán tổng hợp.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#skills">Xem skill map</a>
+              <a class="button secondary" href="#cases">Xem case demo</a>
+            </div>
+          </div>
+          <div class="hero-panel" aria-label="Thông tin nhanh về KetoanAI">
+            <span class="panel-label">Phạm vi dự án</span>
+            <strong>Kế toán tổng hợp, thuế và kiểm soát</strong>
+            <p>Chuẩn hóa quy trình kiểm tra nghiệp vụ thành các AI skill có checklist, căn cứ, đầu ra và cảnh báo rủi ro.</p>
+            <p class="project-goal">Mục tiêu dự án: ứng dụng AI vào quy trình kế toán truyền thống để giảm lỗi kiểm tra thủ công, tăng khả năng kiểm soát hồ sơ và hỗ trợ tuân thủ thuế.</p>
+          </div>
+        </div>
+
+        <dl class="metric-grid">
+          <div>
+            <dt>13</dt>
+            <dd>AI skills nghiệp vụ</dd>
+          </div>
+          <div>
+            <dt>9</dt>
+            <dd>Nhóm workflow kế toán</dd>
+          </div>
+          <div>
+            <dt>19</dt>
+            <dd>Case study có báo cáo</dd>
+          </div>
+          <div>
+            <dt>5</dt>
+            <dd>Bước kiểm soát nghiệp vụ</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="problem" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Accounting Context</span>
+          <h2>Vấn đề kế toán tổng hợp thường gặp</h2>
+          <p>Kế toán tổng hợp không chỉ ghi nhận nghiệp vụ, mà còn phải kiểm chứng từ, kiểm rủi ro thuế, đối chiếu số liệu và phát hiện sai logic trước khi khóa sổ.</p>
+        </div>
+
+        <div class="issue-grid">
+          <article>
+            <span class="card-kicker">Voucher control</span>
+            <h3>Chứng từ thiếu căn cứ</h3>
+            <p>Hợp đồng, nghiệm thu, thanh toán, hóa đơn và bằng chứng thực tế thường không đồng bộ.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Tax risk</span>
+            <h3>Rủi ro VAT/TNDN/TNCN</h3>
+            <p>Chi phí có thể bị loại nếu thiếu điều kiện khấu trừ, thanh toán hoặc hồ sơ chứng minh.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Reconciliation</span>
+            <h3>Số liệu lệch giữa các sổ</h3>
+            <p>Sổ cái, chi tiết công nợ, ngân hàng, tồn kho và bảng kê hóa đơn cần đối chiếu thường xuyên.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Closing</span>
+            <h3>Khóa sổ áp lực cao</h3>
+            <p>Phân bổ, khấu hao, lương, giá vốn, thuế và BCTC cần được rà trước khi nộp báo cáo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="support" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Solution Support</span>
+          <h2>KetoanAI hỗ trợ những gì</h2>
+          <p>Từ các vấn đề trên, KetoanAI được thiết kế như một lớp hỗ trợ kiểm soát nghiệp vụ cho kế toán tổng hợp: nhận tình huống, phân loại rủi ro, đối chiếu checklist và đề xuất bước xử lý tiếp theo.</p>
+        </div>
+
+        <div class="support-grid">
+          <article>
+            <span class="card-kicker">Document control</span>
+            <h3>Kiểm soát chứng từ</h3>
+            <p>So hồ sơ hiện có với checklist theo nghiệp vụ: hợp đồng, hóa đơn, nghiệm thu, thanh toán, bàn giao và bằng chứng thực tế.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Tax review</span>
+            <h3>Rà rủi ro thuế</h3>
+            <p>Nhận diện rủi ro VAT, TNDN, TNCN, hóa đơn điện tử và điều kiện chi phí được trừ trước khi kê khai hoặc quyết toán.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Reconciliation</span>
+            <h3>Đối chiếu số liệu</h3>
+            <p>Hỗ trợ rà sổ cái, chi tiết, công nợ, ngân hàng, tồn kho, bảng kê hóa đơn và các khoản lệch cần khoanh vùng.</p>
+          </article>
+          <article>
+            <span class="card-kicker">Closing support</span>
+            <h3>Khóa sổ và báo cáo</h3>
+            <p>Nhắc các bút toán phân bổ, khấu hao, lương, giá vốn, thuế và rà logic BCTC trước khi chốt kỳ.</p>
+          </article>
+        </div>
+
+        <div class="support-tooling" aria-label="Công nghệ sử dụng của KetoanAI">
+          <strong>Công nghệ sử dụng:</strong>
+          <span>NotebookLM</span>
+          <span>AI Agent Skills</span>
+          <span>Python/pandas</span>
+          <span>Excel/CSV</span>
+        </div>
+      </section>
+
+      <section id="workflow" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Workflow</span>
+          <h2>Quy trình xử lý một tình huống kế toán</h2>
+          <p>Đây là luồng xử lý chung của KetoanAI: từ tình huống hoặc file đầu vào, hệ thống phân loại nghiệp vụ, chọn skill phù hợp, đối chiếu checklist, cảnh báo rủi ro và đưa ra hướng xử lý. Các case study bên dưới là ví dụ áp dụng quy trình này vào chứng từ, thuế, công nợ, tồn kho, lương và BCTC.</p>
+        </div>
+
+        <ol class="workflow-list">
+          <li>
+            <span class="step-index">01</span>
+            <div>
+              <strong>Nhận tình huống hoặc file</strong>
+              <span>Chứng từ, sổ cái, bảng kê, sao kê, bảng lương hoặc câu hỏi thuế.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">02</span>
+            <div>
+              <strong>Phân loại nghiệp vụ</strong>
+              <span>Xác định skill phù hợp: chứng từ, thuế, đối chiếu, tồn kho, lương, BCTC.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">03</span>
+            <div>
+              <strong>Đối chiếu checklist</strong>
+              <span>So hồ sơ hiện có với checklist kế toán, thuế và pháp lý liên quan.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">04</span>
+            <div>
+              <strong>Cảnh báo rủi ro</strong>
+              <span>Nêu thiếu sót, mức độ ảnh hưởng, dữ liệu cần bổ sung và hướng xử lý.</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-index">05</span>
+            <div>
+              <strong>Kết luận hành động</strong>
+              <span>Đề xuất bút toán, hồ sơ bổ sung, bước kiểm tra tiếp theo hoặc cách rà file.</span>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">AI Skill Map</span>
+          <h2>13 AI skill nghiệp vụ của KetoanAI</h2>
+          <p>Các skill được sắp xếp theo chu trình kế toán tổng hợp: kiểm chứng từ, rà thuế, định khoản, ghi nhận phần mềm, theo dõi công nợ, tồn kho, lương, đối chiếu số liệu, khóa sổ và tra cứu căn cứ pháp lý.</p>
+        </div>
+
+        <div class="skill-layout">
+          <div class="skill-grid" aria-label="Danh sách skill KetoanAI">
+            <button class="skill-card active" type="button" data-skill-id="voucher-checker" aria-selected="true"><span>01</span><h3>Voucher Checker</h3><p>Kiểm bộ chứng từ theo từng nghiệp vụ trước khi thanh toán, hạch toán và kê khai thuế.</p></button>
+            <button class="skill-card" type="button" data-skill-id="tax-risk-reviewer" aria-selected="false"><span>02</span><h3>Tax Risk Reviewer</h3><p>Rà rủi ro VAT, TNDN, TNCN, hóa đơn điện tử và chi phí được trừ.</p></button>
+            <button class="skill-card" type="button" data-skill-id="accounting-entry-assistant" aria-selected="false"><span>03</span><h3>Accounting Entry Assistant</h3><p>Định khoản nghiệp vụ kế toán, giải thích tài khoản nợ/có và lưu ý thuế liên quan.</p></button>
+            <button class="skill-card" type="button" data-skill-id="accounting-software-operator" aria-selected="false"><span>04</span><h3>Accounting Software Operator</h3><p>Hướng dẫn thao tác MISA/AMIS, HTKK, Thuế điện tử, hóa đơn điện tử, BHXH điện tử.</p></button>
+            <button class="skill-card" type="button" data-skill-id="ar-ap-aging-debt-control-reviewer" aria-selected="false"><span>05</span><h3>AR/AP Aging & Debt Control Reviewer</h3><p>Rà tuổi nợ phải thu/phải trả, công nợ quá hạn, công nợ âm và lịch thu chi.</p></button>
+            <button class="skill-card" type="button" data-skill-id="inventory-cost-reviewer" aria-selected="false"><span>06</span><h3>Inventory Cost Reviewer</h3><p>Rà nhập xuất tồn, giá vốn, âm kho và bất thường TK 156/152/155/632.</p></button>
+            <button class="skill-card" type="button" data-skill-id="fixed-asset-prepaid-expense-reviewer" aria-selected="false"><span>07</span><h3>Fixed Asset & Prepaid Expense Reviewer</h3><p>Rà TSCĐ, CCDC, chi phí trả trước, khấu hao, phân bổ và hồ sơ thanh lý.</p></button>
+            <button class="skill-card" type="button" data-skill-id="payroll-bhxh-tncn-assistant" aria-selected="false"><span>08</span><h3>Payroll BHXH TNCN Assistant</h3><p>Kiểm lương, BHXH, BHYT, BHTN, TNCN, hồ sơ lương và bút toán liên quan.</p></button>
+            <button class="skill-card" type="button" data-skill-id="account-reconciliation-assistant" aria-selected="false"><span>09</span><h3>Account Reconciliation Assistant</h3><p>Đối chiếu sổ cái với chi tiết, ngân hàng, công nợ, hóa đơn, tồn kho và thuế.</p></button>
+            <button class="skill-card" type="button" data-skill-id="accounting-error-fixer" aria-selected="false"><span>10</span><h3>Accounting Error Fixer</h3><p>Khoanh vùng lỗi sai tài khoản, sai kỳ, sai số tiền, sai thuế, trùng hoặc thiếu chứng từ.</p></button>
+            <button class="skill-card" type="button" data-skill-id="month-end-closing-assistant" aria-selected="false"><span>11</span><h3>Month-End Closing Assistant</h3><p>Hỗ trợ checklist khóa sổ tháng, quý, năm và các bút toán cuối kỳ.</p></button>
+            <button class="skill-card" type="button" data-skill-id="financial-statement-reviewer" aria-selected="false"><span>12</span><h3>Financial Statement Reviewer</h3><p>Rà soát BCĐKT, KQKD, LCTT, BCĐSPS và biến động bất thường.</p></button>
+            <button class="skill-card" type="button" data-skill-id="legal-researcher" aria-selected="false"><span>13</span><h3>Legal Researcher</h3><p>Tra cứu căn cứ pháp luật để hỗ trợ kết luận kế toán, thuế và hồ sơ.</p></button>
+          </div>
+
+          <aside class="skill-detail-panel" aria-live="polite" aria-label="Thông tin chi tiết skill đang chọn">
+            <span class="detail-kicker" id="skill-detail-kicker">Skill 01</span>
+            <h3 id="skill-detail-title">Voucher Checker</h3>
+            <p id="skill-detail-intro">Kiểm tra bộ chứng từ theo từng nghiệp vụ để xác định hồ sơ đã đủ căn cứ hạch toán, thanh toán và kê khai thuế hay chưa.</p>
+
+            <div class="detail-block">
+              <h4>Mục đích</h4>
+              <p id="skill-detail-purpose">Giúp kế toán phát hiện thiếu hợp đồng, nghiệm thu, hóa đơn, chứng từ thanh toán và bằng chứng nghiệp vụ trước khi ghi nhận chi phí.</p>
+            </div>
+
+            <div class="detail-block">
+              <h4>Phạm vi xử lý</h4>
+              <ul id="skill-detail-actions">
+                <li>Phân loại nghiệp vụ và checklist chứng từ cần có.</li>
+                <li>So hồ sơ hiện có với điều kiện thuế, kế toán và thanh toán.</li>
+                <li>Nêu rủi ro bị loại chi phí, không khấu trừ VAT hoặc thiếu căn cứ nội bộ.</li>
+              </ul>
+            </div>
+
+            <div class="detail-block">
+              <h4>Cách vận hành / nguồn kiểm chứng</h4>
+              <p id="skill-detail-method">Dùng NotebookLM làm nguồn checklist, chạy quy trình 4 bước: phân loại nghiệp vụ, tra checklist, kiểm chứng điều kiện thuế và trả báo cáo xử lý.</p>
+            </div>
+
+            <div class="detail-grid">
+              <div>
+                <h4>Dữ liệu đầu vào</h4>
+                <p id="skill-detail-input">Tình huống nghiệp vụ, hợp đồng, hóa đơn, thanh toán, nghiệm thu, file chứng từ.</p>
+              </div>
+              <div>
+                <h4>Kết quả đầu ra</h4>
+                <p id="skill-detail-output">Kết luận đủ/thiếu hồ sơ, rủi ro chính và chứng từ cần bổ sung.</p>
+              </div>
+            </div>
+
+            <div class="detail-example">
+              <h4>Ví dụ tình huống</h4>
+              <p id="skill-detail-example">Dịch vụ marketing 55 triệu có hóa đơn và chuyển khoản nhưng thiếu biên bản nghiệm thu.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="cases" class="section">
+        <div class="section-heading">
+          <span class="eyebrow">Case Demo Library</span>
+          <h2>Case study nghiệp vụ kế toán tổng hợp</h2>
+          <p>Mỗi case là một hồ sơ kiểm tra ngắn: tình huống thực tế, kết luận rút gọn và nút xem phân tích chi tiết để đọc báo cáo đầy đủ.</p>
+        </div>
+
+        <div class="case-library-layout">
+          <div class="case-group-list">
+          <section class="case-group" data-case-group="voucher-tax-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 01</span>
+                <h3>Kiểm chứng từ và rủi ro thuế</h3>
+                <p>Nhóm này gom các case liên quan đến hồ sơ nghiệp vụ, hóa đơn, VAT/TNDN/TNCN và điều kiện chi phí được trừ.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-voucher">Voucher Checker</span>
+                <span class="skill-pill-tax">Tax Risk Reviewer</span>
+              </div>
+            </div>
+
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-voucher">
+                <span>Voucher Checker</span>
+                <p>Kiểm bộ chứng từ theo nghiệp vụ trước khi hạch toán, thanh toán và kê khai.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="voucher-entertainment-card-22m">
+                <div class="case-meta">Voucher Checker · Tiếp khách & công tác</div>
+                <h3>Tiếp khách 22 triệu thanh toán bằng thẻ cá nhân</h3>
+                <p class="case-question">Sếp quẹt thẻ tín dụng cá nhân thanh toán hóa đơn nhà hàng 22 triệu đứng tên công ty, sau đó yêu cầu công ty chi tiền mặt hoàn ứng. Hồ sơ kèm thêm hóa đơn vé máy bay đứng tên sếp, không ghi MST công ty.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Rủi ro rất cao nếu công ty hoàn ứng bằng tiền mặt.</li>
+                    <li>Cần chuyển khoản bồi hoàn cho cá nhân và có văn bản ủy quyền/thanh toán hộ.</li>
+                    <li>Hóa đơn vé máy bay cần bổ sung boarding pass và hồ sơ công tác để chứng minh phục vụ công việc.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="voucher-entertainment-card-22m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="voucher-entertainment-card-22m-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức độ an toàn:</strong> Rất thấp nếu xử lý hoàn ứng bằng tiền mặt.</li>
+                    <li><strong>Có nên hạch toán ngay không:</strong> Chưa nên chốt hồ sơ cho tới khi đủ chứng từ thanh toán hộ và hồ sơ công tác.</li>
+                    <li><strong>Có nên chi tiền mặt hoàn ứng không:</strong> Không. Khoản bồi hoàn nên đi qua ngân hàng để bảo vệ điều kiện chi phí và VAT.</li>
+                    <li><strong>Điểm cần xử lý gấp:</strong> Lập hồ sơ ủy quyền/thanh toán hộ, chuyển khoản bồi hoàn, bổ sung boarding pass và chứng từ công tác.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Tiếp khách và công tác phí</span>
+                    <span>Giá trị hóa đơn nhà hàng: 22.000.000 VNĐ</span>
+                    <span>Thanh toán ban đầu: Thẻ tín dụng cá nhân của sếp</span>
+                    <span>Yêu cầu hiện tại: Công ty hoàn ứng bằng tiền mặt</span>
+                  </div>
+
+                  <h4>BỘ CHỨNG TỪ CẦN CÓ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Chứng từ</th>
+                          <th>Mục đích kiểm soát</th>
+                          <th>Tình trạng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Hóa đơn GTGT nhà hàng</td>
+                          <td>Căn cứ ghi nhận chi phí tiếp khách.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Sao kê/thẻ cá nhân chứng minh đã thanh toán</td>
+                          <td>Chứng minh người lao động đã chi hộ công ty.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Quyết định/ủy quyền thanh toán hộ</td>
+                          <td>Làm rõ việc công ty cho phép cá nhân chi hộ.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Ủy nhiệm chi công ty bồi hoàn cho cá nhân</td>
+                          <td>Thay phiếu chi tiền mặt để bảo vệ điều kiện thanh toán.</td>
+                          <td><span class="status-risk">Chưa đạt nếu chi tiền mặt</span></td>
+                        </tr>
+                        <tr>
+                          <td>Boarding pass và quyết định công tác</td>
+                          <td>Chứng minh vé máy bay phục vụ chuyến công tác thực tế.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>RỦI RO VAT, TNDN VÀ HỒ SƠ</h4>
+                  <ol>
+                    <li><strong>Rủi ro thanh toán tiền mặt:</strong> Nếu hóa đơn giá trị lớn nhưng công ty hoàn ứng bằng tiền mặt, hồ sơ yếu ở điều kiện thanh toán không dùng tiền mặt.</li>
+                    <li><strong>Rủi ro bản chất nghiệp vụ:</strong> Cần chứng minh đây là khoản tiếp khách/công tác phục vụ hoạt động kinh doanh, không phải chi cá nhân.</li>
+                    <li><strong>Rủi ro vé máy bay:</strong> Hóa đơn vé bay đứng tên cá nhân cần kèm boarding pass, quyết định công tác và lịch trình để chứng minh phát sinh thực tế.</li>
+                  </ol>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Không lập phiếu chi tiền mặt hoàn ứng cho hóa đơn 22 triệu.</li>
+                    <li>Lập giấy đề nghị thanh toán kèm sao kê thẻ cá nhân và quyết định/ủy quyền thanh toán hộ.</li>
+                    <li>Công ty chuyển khoản bồi hoàn đúng số tiền cho cá nhân, lưu UNC và giấy báo Nợ ngân hàng.</li>
+                    <li>Bổ sung quyết định công tác, lịch trình, boarding pass và tài liệu chứng minh mục đích tiếp khách.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điểm i khoản 2 Điều 26 Nghị định 181/2025/NĐ-CP:</strong> khoản chi do người lao động thanh toán bằng thẻ cá nhân chỉ đủ điều kiện khấu trừ VAT khi công ty thanh toán lại bằng hình thức không dùng tiền mặt.</li>
+                      <li><strong>Điểm c2 khoản 1 Điều 9 Nghị định 320/2025/NĐ-CP:</strong> khoản chi do người lao động thanh toán hộ chỉ được tính hợp lệ khi có hồ sơ ủy quyền/quy chế và công ty thanh toán lại phù hợp.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="voucher-freelancer-cash-50m">
+                <div class="case-meta">Voucher Checker · Dịch vụ cá nhân</div>
+                <h3>Thuê freelancer 50 triệu, không hóa đơn, đã chi tiền mặt</h3>
+                <p class="case-question">Công ty thuê một cá nhân không kinh doanh làm dịch vụ thiết kế phần mềm với thù lao 50 triệu. Cá nhân không có hóa đơn, kế toán đã làm hợp đồng dịch vụ và lập phiếu chi tiền mặt đủ 50 triệu.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Rủi ro rất cao nếu giữ phiếu chi tiền mặt cho khoản dịch vụ 50 triệu.</li>
+                    <li>Cần xử lý khấu trừ 10% thuế TNCN trước khi chi trả cho cá nhân.</li>
+                    <li>Cần hoàn thiện hợp đồng, nghiệm thu, bảng kê, chứng từ khấu trừ và thanh toán qua ngân hàng.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="voucher-freelancer-cash-50m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="voucher-freelancer-cash-50m-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức độ an toàn:</strong> Rất thấp nếu đã chi đủ 50 triệu bằng tiền mặt.</li>
+                    <li><strong>Có nên giữ cách xử lý hiện tại không:</strong> Không. Cần điều chỉnh trước khi lưu hồ sơ và kê khai.</li>
+                    <li><strong>Điểm cần xử lý gấp:</strong> Hủy/điều chỉnh phiếu chi tiền mặt, khấu trừ TNCN, lập chứng từ khấu trừ và chuyển khoản phần thực nhận.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Thuê cá nhân cung cấp dịch vụ</span>
+                    <span>Giá trị hợp đồng: 50.000.000 VNĐ</span>
+                    <span>Nhà cung cấp: Cá nhân không kinh doanh, không có hóa đơn</span>
+                    <span>Trạng thái hiện tại: Đã lập phiếu chi tiền mặt</span>
+                  </div>
+
+                  <h4>HỒ SƠ CẦN CÓ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Hồ sơ</th>
+                          <th>Mục đích</th>
+                          <th>Tình trạng đề xuất</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Hợp đồng dịch vụ với cá nhân</td>
+                          <td>Xác định công việc, giá trị, thời hạn và nghĩa vụ thuế.</td>
+                          <td><span class="status-ok">Đã có, cần rà điều khoản</span></td>
+                        </tr>
+                        <tr>
+                          <td>Biên bản nghiệm thu/sản phẩm bàn giao</td>
+                          <td>Chứng minh dịch vụ đã hoàn thành thực tế.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Bảng kê thu mua dịch vụ/chứng từ nội bộ</td>
+                          <td>Hồ sơ thay thế khi cá nhân không xuất hóa đơn.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Chứng từ khấu trừ thuế TNCN</td>
+                          <td>Chứng minh công ty đã khấu trừ và kê khai thuế thay cá nhân.</td>
+                          <td><span class="status-risk">Cần lập</span></td>
+                        </tr>
+                        <tr>
+                          <td>Ủy nhiệm chi chuyển khoản cho cá nhân</td>
+                          <td>Bảo vệ điều kiện thanh toán không dùng tiền mặt.</td>
+                          <td><span class="status-risk">Thay phiếu chi tiền mặt</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>RỦI RO THUẾ CHÍNH</h4>
+                  <ol>
+                    <li><strong>Rủi ro TNDN:</strong> Khoản dịch vụ 50 triệu dễ bị loại khỏi chi phí được trừ nếu thiếu hồ sơ nghiệm thu, bảng kê và chứng từ thanh toán phù hợp.</li>
+                    <li><strong>Rủi ro TNCN:</strong> Công ty có nghĩa vụ xem xét khấu trừ thuế TNCN tại nguồn trước khi trả tiền cho cá nhân.</li>
+                    <li><strong>Rủi ro chứng từ:</strong> Không có hóa đơn không đồng nghĩa không được ghi nhận, nhưng hồ sơ thay thế phải đủ mạnh để chứng minh dịch vụ thật.</li>
+                  </ol>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Dừng/hủy phiếu chi tiền mặt hoặc lập hồ sơ điều chỉnh nếu đã ghi nhận sai quy trình.</li>
+                    <li>Tính khoản khấu trừ TNCN phù hợp; với mức 10% tham khảo, cá nhân thực nhận 45.000.000 VNĐ và 5.000.000 VNĐ kê khai nộp thuế.</li>
+                    <li>Lập biên bản nghiệm thu phần mềm/sản phẩm, bảng kê dịch vụ và chứng từ khấu trừ thuế TNCN.</li>
+                    <li>Chuyển khoản phần thực nhận cho cá nhân, lưu UNC, giấy báo Nợ và thông tin tài khoản người nhận.</li>
+                    <li>Đưa khoản thuế đã khấu trừ vào tờ khai TNCN đúng kỳ, đồng thời lưu toàn bộ hồ sơ kèm hợp đồng.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điểm b, c khoản 1 Điều 9 Nghị định 320/2025/NĐ-CP:</strong> khoản chi từ 05 triệu đồng trở lên, bao gồm cả trường hợp lập bảng kê, phải thanh toán không dùng tiền mặt để bảo vệ chi phí được trừ.</li>
+                      <li><strong>Khoản 2 Điều 4 Nghị định 70/2025/NĐ-CP:</strong> công ty có trách nhiệm khấu trừ 10% thuế TNCN tại nguồn và cấp chứng từ khấu trừ thuế điện tử cho cá nhân.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="voucher-central-ac-350m">
+                <div class="case-meta">Voucher Checker · TSCĐ lắp đặt</div>
+                <h3>Mua hệ thống điều hòa trung tâm 350 triệu</h3>
+                <p class="case-question">Công ty mua hệ thống điều hòa trung tâm dùng cho văn phòng, giá trị chưa thuế 350 triệu, VAT 8%. Hồ sơ đã có hợp đồng mua bán, hóa đơn GTGT, biên bản bàn giao thiết bị và ủy nhiệm chi chuyển khoản.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Hồ sơ đủ điều kiện kê khai VAT nhưng chưa đủ mạnh để trích khấu hao ngay.</li>
+                    <li>Có thể tập hợp chi phí qua TK 241, nhưng chưa nên kết chuyển sang TK 211 nếu thiếu nghiệm thu lắp đặt/chạy thử.</li>
+                    <li>Cần bổ sung biên bản nghiệm thu chạy thử, thẻ TSCĐ và quyết định đưa tài sản vào sử dụng.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="voucher-central-ac-350m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="voucher-central-ac-350m-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức độ an toàn:</strong> Trung bình. Đủ cơ sở kê khai VAT, nhưng hồ sơ TSCĐ chưa hoàn tất để bắt đầu khấu hao.</li>
+                    <li><strong>Có nên hạch toán ngay không:</strong> Có thể tập hợp qua TK 241 - XDCB dở dang trong giai đoạn lắp đặt/chạy thử.</li>
+                    <li><strong>Chưa nên làm:</strong> Chưa kết chuyển sang TK 211 và chưa trích khấu hao nếu thiếu nghiệm thu chạy thử, quyết định đưa vào sử dụng.</li>
+                    <li><strong>Skill phối hợp:</strong> Fixed Asset & Prepaid Expense Reviewer để rà thời gian khấu hao và hồ sơ TSCĐ.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Mua sắm TSCĐ lắp đặt</span>
+                    <span>Giá trị chưa VAT: 350.000.000 VNĐ</span>
+                    <span>VAT 8%: 28.000.000 VNĐ</span>
+                    <span>Thanh toán: Chuyển khoản qua ủy nhiệm chi</span>
+                  </div>
+
+                  <h4>BỘ CHỨNG TỪ CẦN CÓ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Chứng từ</th>
+                          <th>Mục đích kiểm soát</th>
+                          <th>Tình trạng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Hợp đồng mua bán/lắp đặt</td>
+                          <td>Xác định phạm vi cung cấp, lắp đặt, giá trị và thời hạn bàn giao.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Hóa đơn GTGT VAT 8%</td>
+                          <td>Căn cứ kê khai VAT đầu vào và tập hợp nguyên giá.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Ủy nhiệm chi chuyển khoản</td>
+                          <td>Đáp ứng điều kiện thanh toán không dùng tiền mặt.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Biên bản bàn giao thiết bị</td>
+                          <td>Xác nhận thiết bị đã được giao nhận.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Biên bản nghiệm thu lắp đặt/chạy thử</td>
+                          <td>Xác nhận tài sản đã sẵn sàng sử dụng, làm căn cứ kết chuyển và khấu hao.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Thẻ TSCĐ và quyết định đưa vào sử dụng</td>
+                          <td>Hoàn thiện hồ sơ quản lý TSCĐ và thời điểm bắt đầu khấu hao.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>RỦI RO THUẾ VÀ KẾ TOÁN</h4>
+                  <ol>
+                    <li><strong>Rủi ro trích khấu hao sớm:</strong> Nếu trích khấu hao khi chưa có biên bản nghiệm thu chạy thử, chi phí khấu hao trước thời điểm đủ hồ sơ có thể bị loại.</li>
+                    <li><strong>Rủi ro ghi nhận sai tài khoản:</strong> Nếu hệ thống còn trong giai đoạn lắp đặt, nên tập hợp qua TK 241 thay vì ghi thẳng TK 211.</li>
+                    <li><strong>Rủi ro TTĐB:</strong> Nếu hệ thống điều hòa có công suất từ trên 24.000 BTU đến 90.000 BTU, cần kiểm tra khả năng chịu thuế TTĐB và cách cộng vào nguyên giá TSCĐ.</li>
+                  </ol>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Tập hợp hồ sơ mua sắm và lắp đặt theo thứ tự: hợp đồng, hóa đơn, UNC, bàn giao, nghiệm thu chạy thử.</li>
+                    <li>Hạch toán giai đoạn chưa hoàn thành qua TK 241; chỉ kết chuyển sang TK 211 khi có nghiệm thu chạy thử và quyết định đưa vào sử dụng.</li>
+                    <li>Lập thẻ TSCĐ, xác định ngày bắt đầu sử dụng, thời gian khấu hao và bộ phận sử dụng.</li>
+                    <li>Kiểm tra công suất hệ thống điều hòa trên hợp đồng/hóa đơn để đánh giá rủi ro TTĐB nếu thuộc ngưỡng liên quan.</li>
+                  </ol>
+                </div>
+              </article>
+
+              <div class="case-subgroup-heading skill-section-tax">
+                <span>Tax Risk Reviewer</span>
+                <p>Rà rủi ro VAT, TNDN, TNCN, hóa đơn và giao dịch liên kết trước quyết toán.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="tax-car-5-seat-3b">
+                <div class="case-meta">Tax Risk Reviewer · TSCĐ & xe ô tô</div>
+                <h3>Xe ô tô 5 chỗ 3 tỷ đứng tên công ty</h3>
+                <p class="case-question">Công ty mua xe ô tô 5 chỗ nguyên giá 3 tỷ, đứng tên công ty nhưng chủ yếu để giám đốc đi lại cá nhân và ngoại giao. Kế toán đang khấu hao toàn bộ 3 tỷ và kê khai khấu trừ toàn bộ VAT đầu vào.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Có rủi ro VAT và TNDN ở phần nguyên giá vượt trần nếu xe không thuộc nhóm kinh doanh vận tải/du lịch/khách sạn.</li>
+                    <li>Cần tách phần chi phí được trừ và phần không được trừ khi tính khấu hao.</li>
+                    <li>Cần hồ sơ chứng minh xe phục vụ hoạt động kinh doanh, không chỉ phục vụ cá nhân.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="tax-car-5-seat-3b-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="tax-car-5-seat-3b-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức rủi ro:</strong> Cao nếu khấu hao và khấu trừ VAT trên toàn bộ nguyên giá 3 tỷ.</li>
+                    <li><strong>Vấn đề trọng tâm:</strong> Xe 5 chỗ không trực tiếp kinh doanh vận tải/du lịch/khách sạn thường có giới hạn phần được tính chi phí và VAT.</li>
+                    <li><strong>Việc cần làm:</strong> Rà lại mục đích sử dụng, bảng khấu hao, VAT đầu vào và hồ sơ quản lý xe.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT TÌNH HUỐNG</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Mua xe ô tô 5 chỗ ghi nhận TSCĐ</span>
+                    <span>Nguyên giá: 3.000.000.000 VNĐ</span>
+                    <span>Rủi ro chính: VAT đầu vào và khấu hao vượt trần</span>
+                    <span>Điểm yếu hồ sơ: Xe dùng nhiều cho cá nhân/ngoại giao</span>
+                  </div>
+
+                  <h4>RỦI RO THUẾ CẦN RÀ</h4>
+                  <ol>
+                    <li><strong>VAT đầu vào:</strong> Cần xác định phần VAT được khấu trừ theo giới hạn áp dụng cho xe dưới 9 chỗ không dùng trực tiếp cho hoạt động kinh doanh vận tải, du lịch, khách sạn.</li>
+                    <li><strong>Chi phí khấu hao:</strong> Nếu trích khấu hao trên toàn bộ 3 tỷ, phần vượt giới hạn có thể bị loại khỏi chi phí được trừ TNDN.</li>
+                    <li><strong>Rủi ro sử dụng cá nhân:</strong> Nếu không có lịch trình, quy chế sử dụng xe, quyết định điều xe và hồ sơ công tác, cơ quan thuế có thể nghi ngờ chi phí không phục vụ SXKD.</li>
+                  </ol>
+
+                  <h4>HỒ SƠ BẢO VỆ</h4>
+                  <ul>
+                    <li>Hóa đơn mua xe, hợp đồng mua bán, chứng từ thanh toán không dùng tiền mặt.</li>
+                    <li>Biên bản bàn giao, quyết định đưa tài sản vào sử dụng, thẻ TSCĐ và bảng khấu hao.</li>
+                    <li>Quy chế sử dụng xe, lệnh điều xe, lịch trình công tác, hồ sơ bảo dưỡng/xăng dầu liên quan.</li>
+                  </ul>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Tính lại phần nguyên giá/khấu hao được tính vào chi phí được trừ theo ngưỡng áp dụng.</li>
+                    <li>Điều chỉnh bảng khấu hao và theo dõi riêng phần chi phí không được trừ khi quyết toán TNDN.</li>
+                    <li>Rà lại VAT đã khấu trừ, cân nhắc điều chỉnh nếu đã kê khai vượt phần được phép.</li>
+                    <li>Hoàn thiện hồ sơ chứng minh xe phục vụ công việc, tránh để hồ sơ chỉ thể hiện mục đích cá nhân.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Khoản 4 Điều 25 Nghị định 181/2025/NĐ-CP:</strong> ô tô chở người từ 09 chỗ ngồi trở xuống, trừ xe kinh doanh vận tải, du lịch, khách sạn, chỉ được khấu trừ VAT đầu vào tương ứng phần trị giá đến 1,6 tỷ đồng.</li>
+                      <li><strong>Điểm e1 khoản 6 Điều 10 Nghị định 320/2025/NĐ-CP:</strong> phần khấu hao tương ứng nguyên giá vượt 1,6 tỷ đồng/xe không được tính vào chi phí được trừ.</li>
+                      <li><strong>Điểm a khoản 6 Điều 10 Nghị định 320/2025/NĐ-CP:</strong> khấu hao TSCĐ không sử dụng cho hoạt động SXKD không được tính vào chi phí được trừ.</li>
+                      <li><strong>Khoản 1 Điều 23 Nghị định 181/2025/NĐ-CP:</strong> VAT đầu vào chỉ được khấu trừ nếu hàng hóa, dịch vụ sử dụng cho SXKD hàng hóa, dịch vụ chịu thuế GTGT.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="tax-runaway-supplier-500m">
+                <div class="case-meta">Tax Risk Reviewer · Hóa đơn đầu vào</div>
+                <h3>Nhà cung cấp bỏ trốn sau khi xuất hóa đơn 500 triệu</h3>
+                <p class="case-question">Năm ngoái công ty mua vật tư 500 triệu của Công ty A, đã kê khai VAT và đưa vào chi phí. Hiện phát hiện Công ty A bị đóng mã số thuế/bỏ trốn và sắp có đoàn thanh tra thuế.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Rủi ro rất cao, nhưng cần phân biệt giao dịch thật hay giao dịch không có thật.</li>
+                    <li>Cần chuẩn bị hồ sơ chứng minh hàng hóa có mua, có nhập kho, có thanh toán và có sử dụng tạo doanh thu.</li>
+                    <li>Nếu không chứng minh được giao dịch thật, VAT và chi phí có nguy cơ bị loại.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="tax-runaway-supplier-500m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="tax-runaway-supplier-500m-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức rủi ro:</strong> Rất cao do nhà cung cấp đã bị cơ quan thuế đưa vào trạng thái rủi ro.</li>
+                    <li><strong>Không nên làm vội:</strong> Không tự xóa chi phí hoặc điều chỉnh VAT khi chưa rà đủ hồ sơ giao dịch thật.</li>
+                    <li><strong>Ưu tiên:</strong> Lập bộ hồ sơ giải trình trước khi làm việc với đoàn thanh tra.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT TÌNH HUỐNG</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Mua vật tư đầu vào</span>
+                    <span>Giá trị: 500.000.000 VNĐ</span>
+                    <span>Trạng thái: Đã kê khai VAT và tính chi phí</span>
+                    <span>Rủi ro phát sinh: Nhà cung cấp bị đóng MST/bỏ trốn</span>
+                  </div>
+
+                  <h4>BẰNG CHỨNG GIAO DỊCH THẬT</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Nhóm bằng chứng</th>
+                          <th>Cần chuẩn bị</th>
+                          <th>Mục đích</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Thương mại</td>
+                          <td>Hợp đồng, báo giá, đơn đặt hàng, email/Zalo giao dịch.</td>
+                          <td>Chứng minh giao dịch có thật, không chỉ có hóa đơn.</td>
+                        </tr>
+                        <tr>
+                          <td>Giao nhận/kho</td>
+                          <td>Phiếu nhập kho, biên bản giao nhận, thẻ kho, nhập xuất tồn.</td>
+                          <td>Chứng minh vật tư đã vào kho.</td>
+                        </tr>
+                        <tr>
+                          <td>Thanh toán</td>
+                          <td>Ủy nhiệm chi, sao kê ngân hàng, đối chiếu công nợ.</td>
+                          <td>Chứng minh dòng tiền thật.</td>
+                        </tr>
+                        <tr>
+                          <td>Sử dụng tạo doanh thu</td>
+                          <td>Phiếu xuất kho, lệnh sản xuất, giá vốn, doanh thu liên quan.</td>
+                          <td>Chứng minh vật tư phục vụ SXKD.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>RỦI RO VAT VÀ TNDN</h4>
+                  <ol>
+                    <li><strong>VAT:</strong> Nếu hóa đơn bị xem là không hợp pháp hoặc giao dịch không thật, VAT đầu vào có nguy cơ bị loại.</li>
+                    <li><strong>TNDN:</strong> Chi phí 500 triệu có nguy cơ bị loại nếu không chứng minh được vật tư đã mua, nhập, thanh toán và sử dụng cho hoạt động kinh doanh.</li>
+                    <li><strong>Quản trị hồ sơ:</strong> Chỉ có hóa đơn là chưa đủ; phải dựng được chuỗi giao dịch từ đặt hàng đến kho, thanh toán và tiêu thụ/sản xuất.</li>
+                  </ol>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Trích toàn bộ hồ sơ mua hàng: hợp đồng, hóa đơn, phiếu nhập kho, giao nhận, thanh toán, công nợ.</li>
+                    <li>Chạy báo cáo nhập xuất tồn để chứng minh 500 triệu vật tư đã được xuất dùng hoặc còn tồn thực tế.</li>
+                    <li>Đối chiếu vật tư đã xuất với lệnh sản xuất, giá vốn hoặc doanh thu đầu ra liên quan.</li>
+                    <li>Lập file giải trình theo dòng thời gian giao dịch, tránh trả lời rời rạc khi thanh tra hỏi.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Khoản 2 Điều 45 Luật Quản lý Thuế số 108/2025/QH15:</strong> nếu người mua ngay tình, nghiệp vụ đã ghi nhận đầy đủ trên sổ kế toán nhưng dẫn đến thiếu thuế, rủi ro có thể bị xử lý theo hướng khai sai với mức phạt 20% trên số thuế khai thiếu.</li>
+                      <li><strong>Điểm d khoản 4 Điều 45 Luật Quản lý Thuế:</strong> sử dụng hóa đơn, chứng từ không hợp pháp để hạch toán hàng hóa, dịch vụ mua vào làm giảm số thuế phải nộp có thể bị xử lý theo hành vi trốn thuế.</li>
+                      <li><strong>Khoản 15 Nghị định 181/2025/NĐ-CP:</strong> hóa đơn từ hành vi bị nghiêm cấm không được khấu trừ VAT.</li>
+                      <li><strong>Khoản 16 Nghị định 181/2025/NĐ-CP:</strong> VAT đầu vào không được khấu trừ có thể tính vào chi phí TNDN nếu đáp ứng điều kiện và có chứng từ thanh toán không dùng tiền mặt.</li>
+                      <li><strong>Điều 26 Nghị định 181/2025/NĐ-CP:</strong> hàng hóa, dịch vụ mua vào từ 05 triệu đồng trở lên phải có chứng từ thanh toán không dùng tiền mặt.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="tax-director-loan-5b">
+                <div class="case-meta">Tax Risk Reviewer · Giao dịch liên kết</div>
+                <h3>Vay giám đốc 5 tỷ với lãi suất 0%</h3>
+                <p class="case-question">Công ty thiếu vốn lưu động nên làm hợp đồng mượn tiền của Giám đốc kiêm cổ đông lớn nhất số tiền 5 tỷ, lãi suất 0% trong 1 năm. Cần đánh giá rủi ro TNDN, TNCN và quyền ấn định thuế.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Lãi suất 0% với bên liên quan là điểm rủi ro cần giải trình khi thanh tra.</li>
+                    <li>Cần xác định giao dịch có thuộc diện giao dịch liên kết và nghĩa vụ kê khai liên quan hay không.</li>
+                    <li>Cần hợp đồng vay, dòng tiền ngân hàng, mục đích sử dụng vốn và căn cứ lãi suất thị trường nếu điều chỉnh.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="tax-director-loan-5b-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="tax-director-loan-5b-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức rủi ro:</strong> Trung bình đến cao nếu giám đốc là bên liên quan và khoản vay không có hồ sơ giải trình.</li>
+                    <li><strong>Điểm nhạy cảm:</strong> Lãi suất 0% có thể bị xem xét lại theo nguyên tắc giao dịch độc lập.</li>
+                    <li><strong>Việc cần làm:</strong> Rà nghĩa vụ giao dịch liên kết, dòng tiền, hợp đồng vay và mục đích sử dụng vốn.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT TÌNH HUỐNG</h4>
+                  <div class="report-facts">
+                    <span>Loại nghiệp vụ: Vay/mượn tiền từ giám đốc</span>
+                    <span>Số tiền: 5.000.000.000 VNĐ</span>
+                    <span>Lãi suất hợp đồng: 0%/năm</span>
+                    <span>Thời hạn: 1 năm</span>
+                  </div>
+
+                  <h4>RỦI RO THUẾ CẦN RÀ</h4>
+                  <ol>
+                    <li><strong>Giao dịch liên kết:</strong> Nếu giám đốc đồng thời là cổ đông lớn/người điều hành có quyền kiểm soát, khoản vay có thể cần rà theo quy định giao dịch liên kết.</li>
+                    <li><strong>Ấn định lãi suất:</strong> Cơ quan thuế có thể đặt câu hỏi vì sao khoản vay lớn nhưng lãi suất 0%, đặc biệt nếu công ty có giao dịch tài chính với bên liên quan.</li>
+                    <li><strong>TNCN của cá nhân cho vay:</strong> Nếu bị điều chỉnh theo lãi suất thị trường, cần đánh giá khả năng phát sinh nghĩa vụ thuế với khoản lãi ấn định.</li>
+                  </ol>
+
+                  <h4>HỒ SƠ CẦN CÓ</h4>
+                  <ul>
+                    <li>Hợp đồng vay/mượn tiền ghi rõ số tiền, thời hạn, lãi suất, mục đích sử dụng và phương thức thanh toán.</li>
+                    <li>Sao kê ngân hàng chứng minh tiền vào công ty và tiền hoàn trả nếu có.</li>
+                    <li>Nghị quyết/quyết định nội bộ về việc vay vốn từ giám đốc nếu điều lệ/quy chế yêu cầu.</li>
+                    <li>Phụ lục giao dịch liên kết hoặc hồ sơ giải trình nếu giao dịch thuộc diện phải kê khai.</li>
+                  </ul>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Xác định quan hệ giữa giám đốc và công ty: tỷ lệ góp vốn, quyền kiểm soát, vai trò điều hành.</li>
+                    <li>Rà khoản vay có thuộc diện giao dịch liên kết và có phải kê khai trong quyết toán TNDN hay không.</li>
+                    <li>Nếu cần giảm rủi ro, cân nhắc điều chỉnh hợp đồng theo lãi suất hợp lý và xử lý thuế phát sinh tương ứng.</li>
+                    <li>Lưu hồ sơ mục đích sử dụng vốn để chứng minh khoản vay phục vụ hoạt động kinh doanh, không phải giao dịch hình thức.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Khoản 17 Điều 4 Luật Quản lý Thuế số 108/2025/QH15:</strong> các bên có quan hệ liên kết là các bên tham gia trực tiếp hoặc gián tiếp vào điều hành, kiểm soát, góp vốn vào doanh nghiệp.</li>
+                      <li><strong>Khoản 18 Điều 4 Luật Quản lý Thuế số 108/2025/QH15:</strong> giao dịch vay tiền giữa giám đốc và công ty có thể là giao dịch liên kết nếu đáp ứng quan hệ liên kết.</li>
+                      <li><strong>Khoản 20 Điều 4 Luật Quản lý Thuế số 108/2025/QH15:</strong> giao dịch liên kết phải tuân thủ nguyên tắc giao dịch độc lập.</li>
+                      <li><strong>Khoản 3 Điều 3 và Điều 12 Luật Thuế TNCN:</strong> lãi tiền cho vay là thu nhập từ đầu tư vốn, áp dụng thuế suất 5%.</li>
+                      <li><strong>Điểm h, i khoản 4 Điều 45 Luật Quản lý Thuế số 108/2025/QH15:</strong> giao dịch không đúng bản chất kinh tế hoặc không tuân thủ kê khai giá giao dịch liên kết là căn cứ để cơ quan thuế xem xét ấn định.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="exam-thinking-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 02</span>
+                <h3>Định khoản kế toán</h3>
+                <p>Nhóm này gom các case định khoản kế toán, giải thích tài khoản và lưu ý chứng từ/thuế liên quan.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-entry">Accounting Entry Assistant</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-entry">
+                <span>Accounting Entry Assistant</span>
+                <p>Đề xuất bút toán, giải thích tài khoản Nợ/Có, chứng từ cần kèm và lưu ý thuế theo từng nghiệp vụ.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="entry-offset-ar-ap-131-331">
+                <div class="case-meta">Accounting Entry Assistant · 131/331</div>
+                <h3>Cấn trừ công nợ 131 và 331, thanh toán chênh lệch</h3>
+                <p class="case-question">Công ty A nợ Công ty B tiền mua hàng 200 triệu. Đồng thời B đang nợ A tiền dịch vụ 150 triệu. Hai bên lập biên bản cấn trừ công nợ, sau đó A chuyển khoản trả nốt phần chênh lệch 50 triệu. Cần định khoản thế nào?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Cấn trừ 150 triệu bằng bút toán Nợ TK 331 / Có TK 131 theo cùng đối tượng Công ty B.</li>
+                    <li>Thanh toán phần chênh lệch 50 triệu bằng Nợ TK 331 / Có TK 112.</li>
+                    <li>Cần biên bản đối chiếu/cấn trừ công nợ và điều khoản bù trừ trong hợp đồng hoặc phụ lục.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="entry-offset-ar-ap-131-331-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="entry-offset-ar-ap-131-331-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Loại nghiệp vụ:</strong> Bù trừ công nợ hai chiều và thanh toán phần chênh lệch.</li>
+                    <li><strong>Số tiền cấn trừ:</strong> 150.000.000 VNĐ, theo số nhỏ hơn giữa khoản phải thu và phải trả.</li>
+                    <li><strong>Số tiền còn phải trả:</strong> 50.000.000 VNĐ, cần thanh toán qua ngân hàng.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>A nợ B tiền mua hàng: 200.000.000 VNĐ - theo dõi TK 331</span>
+                    <span>B nợ A tiền dịch vụ: 150.000.000 VNĐ - theo dõi TK 131</span>
+                    <span>Cấn trừ công nợ: 150.000.000 VNĐ</span>
+                    <span>Thanh toán chênh lệch: 50.000.000 VNĐ qua TK 112</span>
+                    <span>Giả định: Hai khoản công nợ cùng một pháp nhân/cùng MST</span>
+                  </div>
+
+                  <h4>BÚT TOÁN ĐỀ XUẤT</h4>
+                  <div class="report-code">
+                    <span>Cấn trừ công nợ: Nợ TK 331 - Công ty B: 150.000.000 / Có TK 131 - Công ty B: 150.000.000.</span>
+                    <span>Thanh toán chênh lệch: Nợ TK 331 - Công ty B: 50.000.000 / Có TK 112: 50.000.000.</span>
+                  </div>
+
+                  <h4>GIẢI THÍCH TÀI KHOẢN</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Bút toán</th>
+                          <th>Ý nghĩa</th>
+                          <th>Điểm cần kiểm</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Nợ 331 / Có 131</td>
+                          <td>Giảm đồng thời khoản phải trả nhà cung cấp và khoản phải thu khách hàng.</td>
+                          <td>Cùng một đối tượng công nợ, cùng mã số thuế, có biên bản cấn trừ.</td>
+                        </tr>
+                        <tr>
+                          <td>Nợ 331 / Có 112</td>
+                          <td>Tất toán phần A còn phải trả cho B sau khi bù trừ.</td>
+                          <td>Ủy nhiệm chi/giấy báo Nợ ngân hàng 50 triệu.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>CHỨNG TỪ CẦN KÈM THEO</h4>
+                  <ul>
+                    <li>Biên bản đối chiếu công nợ và xác nhận cấn trừ công nợ có chữ ký, đóng dấu của hai bên.</li>
+                    <li>Hợp đồng kinh tế hoặc phụ lục hợp đồng có điều khoản thanh toán bù trừ.</li>
+                    <li>Ủy nhiệm chi và giấy báo Nợ ngân hàng cho phần chênh lệch 50 triệu.</li>
+                    <li>Sổ chi tiết TK 131 và TK 331 trước/sau cấn trừ để chứng minh công nợ đã tất toán đúng.</li>
+                  </ul>
+
+                  <h4>LƯU Ý THUẾ VÀ KIỂM SOÁT</h4>
+                  <ol>
+                    <li>Bù trừ công nợ có thể được xem là hình thức thanh toán không dùng tiền mặt nếu hồ sơ và điều khoản hợp đồng đầy đủ.</li>
+                    <li>Phần chênh lệch 50 triệu vượt ngưỡng thanh toán cần chuyển khoản, không nên chi tiền mặt.</li>
+                    <li>Không cấn trừ giữa hai pháp nhân khác nhau hoặc nhầm đối tượng chi tiết công nợ, vì sẽ làm sai TK 131/331.</li>
+                    <li>Đối chiếu bảng kê hóa đơn và tờ khai VAT để tránh công nợ đã cấn trừ nhưng hóa đơn/tờ khai chưa khớp.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Nghị định 181/2025/NĐ-CP:</strong> cần kiểm điều kiện để bù trừ công nợ được xem là hình thức thanh toán không dùng tiền mặt.</li>
+                      <li><strong>Điểm a khoản 2 Điều 14 Luật Thuế GTGT:</strong> phương thức bù trừ cần được ghi rõ trong hợp đồng kinh tế hoặc phụ lục.</li>
+                      <li><strong>Điểm đ khoản 2 Điều 26 Nghị định 181/2025/NĐ-CP:</strong> phần chênh lệch còn lại trên ngưỡng phải thanh toán qua ngân hàng.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="software-filing-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 03</span>
+                <h3>Thao tác phần mềm, tờ khai và hệ thống điện tử</h3>
+                <p>Nhóm này gom các case thao tác MISA/AMIS, HTKK, Thuế điện tử, hóa đơn điện tử và kiểm tra dữ liệu sau khi nhập.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-software">Accounting Software Operator</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-software">
+                <span>Accounting Software Operator</span>
+                <p>Chuyển quy định hóa đơn, tờ khai và phần mềm kế toán thành thao tác cụ thể trên HĐĐT, MISA/AMIS, HTKK và eTax.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="software-invoice-wrong-buyer-tax-id">
+                <div class="case-meta">Accounting Software Operator · HĐĐT/HTKK/eTax</div>
+                <h3>Hóa đơn điện tử sai mã số thuế người mua</h3>
+                <p class="case-question">Hóa đơn điện tử xuất tháng trước bị sai MST người mua, đã được CQT cấp mã và gửi người mua nhưng chưa kê khai thuế. Cần lập 04/SS-HĐĐT, hóa đơn thay thế hay điều chỉnh? Kê khai vào kỳ nào?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Sai MST là lỗi trọng yếu, không xử lý bằng 04/SS-HĐĐT như trường hợp chỉ sai tên/địa chỉ.</li>
+                    <li>Cần lập hóa đơn thay thế hoặc điều chỉnh trên phần mềm HĐĐT sau khi có biên bản thỏa thuận với người mua.</li>
+                    <li>Kê khai bổ sung vào kỳ phát sinh hóa đơn gốc, đồng thời cập nhật lại MISA/AMIS và lưu biên nhận eTax.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="software-invoice-wrong-buyer-tax-id-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="software-invoice-wrong-buyer-tax-id-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Phần mềm/cổng cần dùng:</strong> Phần mềm HĐĐT như MISA meInvoice hoặc hệ thống đang dùng, MISA/AMIS kế toán, HTKK/eTax.</li>
+                    <li><strong>Cách xử lý:</strong> Lập hóa đơn thay thế hoặc hóa đơn điều chỉnh. Với case sai MST nhưng chưa kê khai, phương án thay thế thường dễ kiểm soát hơn.</li>
+                    <li><strong>Không dùng:</strong> Không dùng mẫu 04/SS-HĐĐT nếu lỗi là sai MST người mua.</li>
+                    <li><strong>Kỳ kê khai:</strong> Khai bổ sung vào kỳ phát sinh hóa đơn gốc, không đưa toàn bộ sang kỳ hiện tại theo cảm tính.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT TÌNH HUỐNG</h4>
+                  <div class="report-facts">
+                    <span>Lỗi sai: Sai mã số thuế người mua</span>
+                    <span>Trạng thái hóa đơn: Đã CQT cấp mã và đã gửi người mua</span>
+                    <span>Trạng thái kê khai: Chưa kê khai thuế</span>
+                    <span>Người mua: Doanh nghiệp/tổ chức</span>
+                    <span>Hệ thống liên quan: HĐĐT, MISA/AMIS, HTKK/eTax</span>
+                  </div>
+
+                  <h4>PHÂN BIỆT 04/SS-HĐĐT, THAY THẾ VÀ ĐIỀU CHỈNH</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Loại sai sót</th>
+                          <th>Cách xử lý</th>
+                          <th>Dùng 04/SS-HĐĐT?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Chỉ sai tên hoặc địa chỉ, nhưng đúng MST</td>
+                          <td>Thông báo người mua và gửi 04/SS-HĐĐT lên CQT.</td>
+                          <td><span class="status-ok">Có</span></td>
+                        </tr>
+                        <tr>
+                          <td>Sai MST, sai tiền, sai thuế suất hoặc sai quy cách hàng hóa</td>
+                          <td>Lập hóa đơn thay thế hoặc hóa đơn điều chỉnh.</td>
+                          <td><span class="status-risk">Không</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>DỮ LIỆU CẦN CHUẨN BỊ TRƯỚC KHI THAO TÁC</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Chứng từ/dữ liệu</th>
+                          <th>Mục đích</th>
+                          <th>Trạng thái</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Biên bản thỏa thuận điều chỉnh/thay thế hóa đơn</td>
+                          <td>Ghi rõ hóa đơn gốc, MST sai, MST đúng và hình thức xử lý.</td>
+                          <td><span class="status-risk">Cần lập trước</span></td>
+                        </tr>
+                        <tr>
+                          <td>Thông tin hóa đơn gốc</td>
+                          <td>Dùng để ghi dòng thay thế/điều chỉnh trên hóa đơn mới.</td>
+                          <td><span class="status-ok">Đã có</span></td>
+                        </tr>
+                        <tr>
+                          <td>MST đúng của người mua</td>
+                          <td>Điền vào hóa đơn thay thế/điều chỉnh và cập nhật phần mềm kế toán.</td>
+                          <td><span class="status-risk">Cần xác nhận</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>QUY TRÌNH THAO TÁC TRÊN HỆ THỐNG</h4>
+                  <ol>
+                    <li>Lập biên bản thỏa thuận với người mua, ghi rõ hóa đơn gốc, nội dung sai và phương án thay thế/điều chỉnh.</li>
+                    <li>Trên phần mềm HĐĐT, tìm hóa đơn gốc bị sai và chọn chức năng lập hóa đơn thay thế hoặc điều chỉnh.</li>
+                    <li>Nếu chọn thay thế, sửa MST người mua sang MST đúng, kiểm lại tên, địa chỉ, hàng hóa, tiền hàng, thuế suất và tiền thuế.</li>
+                    <li>Ký số, gửi CQT cấp mã mới và gửi hóa đơn thay thế/điều chỉnh cho người mua.</li>
+                    <li>Trên MISA/AMIS, cập nhật lại thông tin hóa đơn, kiểm sổ chi tiết TK 131, TK 511 và TK 3331.</li>
+                    <li>Trên HTKK/eTax, nếu tờ khai kỳ gốc đã nộp thì lập 01/KHBS và bản giải trình 01-1/KHBS cho kỳ phát sinh hóa đơn gốc.</li>
+                  </ol>
+
+                  <h4>KIỂM TRA SAU KHI XỬ LÝ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Mục cần kiểm</th>
+                          <th>Công cụ</th>
+                          <th>Kết quả mong đợi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Trạng thái hóa đơn</td>
+                          <td>Phần mềm HĐĐT</td>
+                          <td>Hóa đơn gốc đã thay thế/điều chỉnh, hóa đơn mới có mã CQT.</td>
+                        </tr>
+                        <tr>
+                          <td>Sổ chi tiết doanh thu/công nợ/VAT</td>
+                          <td>MISA/AMIS</td>
+                          <td>TK 131, TK 511, TK 3331 khớp hóa đơn mới.</td>
+                        </tr>
+                        <tr>
+                          <td>Bảng kê hóa đơn đầu ra</td>
+                          <td>HTKK/MISA</td>
+                          <td>MST người mua đã đúng, kỳ kê khai không lệch.</td>
+                        </tr>
+                        <tr>
+                          <td>Biên nhận hồ sơ bổ sung</td>
+                          <td>eTax</td>
+                          <td>01/KHBS và 01-1/KHBS được tiếp nhận nếu phát sinh kê khai bổ sung.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>LỖI THƯỜNG GẶP</h4>
+                  <ol>
+                    <li>Lập 04/SS-HĐĐT cho lỗi sai MST, trong khi 04/SS-HĐĐT chỉ phù hợp với lỗi sai tên/địa chỉ nhưng đúng MST theo tình huống đã rà soát.</li>
+                    <li>Thao tác phần mềm trước, quên lập biên bản thỏa thuận với người mua.</li>
+                    <li>Kê khai hóa đơn thay thế vào kỳ hiện tại trong khi cần rà kỳ phát sinh hóa đơn gốc.</li>
+                    <li>Đã chọn hình thức thay thế/điều chỉnh lần đầu nhưng lần sau lại đổi hình thức xử lý cho cùng hóa đơn.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điểm a, b khoản 1 Điều 19 Nghị định 123/2020/NĐ-CP, sửa bởi khoản 13 Điều 1 Nghị định 70/2025/NĐ-CP:</strong> sai MST xử lý bằng hóa đơn thay thế hoặc điều chỉnh, không dùng 04/SS-HĐĐT.</li>
+                      <li><strong>Điểm b khoản 1 Điều 19 Nghị định 70/2025/NĐ-CP:</strong> cần biên bản thỏa thuận với người mua là tổ chức.</li>
+                      <li><strong>Điểm b.2 khoản 1 Điều 19 Nghị định 70/2025/NĐ-CP:</strong> hóa đơn thay thế cần ghi rõ thay thế cho hóa đơn số, ký hiệu, ngày tháng năm nào.</li>
+                      <li><strong>Điểm d khoản 5 Điều 19 Nghị định 70/2025/NĐ-CP:</strong> cần rà việc kê khai bổ sung vào kỳ phát sinh hóa đơn gốc.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="debt-aging-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 04</span>
+                <h3>Công nợ phải thu, phải trả và aging</h3>
+                <p>Nhóm này tập trung vào tuổi nợ, công nợ quá hạn, công nợ âm, xác nhận công nợ và kế hoạch thu hồi/thanh toán.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-debt">AR/AP Aging & Debt Control Reviewer</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-debt">
+                <span>AR/AP Aging & Debt Control Reviewer</span>
+                <p>Phân loại tuổi nợ, ưu tiên thu hồi/thanh toán và chuẩn bị hồ sơ dự phòng nợ phải thu khó đòi.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="debt-ar-500m-120-days">
+                <div class="case-meta">AR/AP Aging & Debt Control Reviewer · Phải thu 131</div>
+                <h3>Phải thu 500 triệu quá hạn 120 ngày</h3>
+                <p class="case-question">Bảng công nợ TK 131 có khách hàng A nợ 500 triệu đã quá hạn 120 ngày. Đã xuất hóa đơn nhưng khách hàng né tránh ký biên bản đối chiếu công nợ. Cần phân tích rủi ro, quy trình thu hồi và hồ sơ nếu muốn trích lập dự phòng nợ khó đòi.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Rủi ro cao do số tiền lớn, quá hạn trên 90 ngày và hồ sơ xác nhận công nợ còn yếu.</li>
+                    <li>Chưa đủ điều kiện thông thường để trích lập dự phòng vì mới quá hạn 120 ngày, chưa đủ 6 tháng.</li>
+                    <li>Cần lập công văn đòi nợ gửi bảo đảm, biên bản xác nhận công nợ một phía và bảng theo dõi thu hồi.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="debt-ar-500m-120-days-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="debt-ar-500m-120-days-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức rủi ro:</strong> Cao. Khoản phải thu 500 triệu đã quá hạn 120 ngày, hồ sơ thu hồi đang yếu do thiếu xác nhận công nợ.</li>
+                    <li><strong>Khoản cần ưu tiên:</strong> Tăng tốc thu thập bằng chứng đòi nợ và hoàn thiện hồ sơ pháp lý ngay trong tháng.</li>
+                    <li><strong>Có thể khóa sổ không:</strong> Có thể khóa sổ, nhưng chưa được trích lập dự phòng theo điều kiện thông thường vì chưa đủ 6 tháng quá hạn.</li>
+                    <li><strong>Cảnh báo:</strong> 120 ngày tương đương khoảng 4 tháng, chưa đủ mốc 6 tháng để trích lập dự phòng đối với doanh nghiệp thông thường.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT DỮ LIỆU</h4>
+                  <div class="report-facts">
+                    <span>Loại công nợ: Phải thu khách hàng TK 131</span>
+                    <span>Khách hàng: Khách hàng A</span>
+                    <span>Số tiền: 500.000.000 VNĐ</span>
+                    <span>Aging bucket: Quá hạn trên 90 ngày</span>
+                    <span>Tình trạng: Đã xuất hóa đơn, khách hàng né ký xác nhận công nợ</span>
+                  </div>
+
+                  <h4>PHÂN TÍCH KHẢ NĂNG TRÍCH LẬP DỰ PHÒNG</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Khoảng quá hạn</th>
+                          <th>Mức trích</th>
+                          <th>Áp dụng cho KH A hiện tại?</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dưới 6 tháng</td>
+                          <td>Chưa được trích</td>
+                          <td><span class="status-risk">KH A đang ở đây - 120 ngày</span></td>
+                        </tr>
+                        <tr>
+                          <td>6 tháng đến dưới 1 năm</td>
+                          <td>30% - khoảng 150 triệu</td>
+                          <td><span class="status-ok">Áp dụng nếu quá hạn thêm khoảng 2 tháng</span></td>
+                        </tr>
+                        <tr>
+                          <td>1 năm đến dưới 2 năm</td>
+                          <td>50% - khoảng 250 triệu</td>
+                          <td>Chưa áp dụng</td>
+                        </tr>
+                        <tr>
+                          <td>2 năm đến dưới 3 năm</td>
+                          <td>70% - khoảng 350 triệu</td>
+                          <td>Chưa áp dụng</td>
+                        </tr>
+                        <tr>
+                          <td>Từ 3 năm trở lên</td>
+                          <td>100% - khoảng 500 triệu</td>
+                          <td>Chưa áp dụng</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>RỦI RO KẾ TOÁN, DÒNG TIỀN VÀ HỒ SƠ</h4>
+                  <ol>
+                    <li><strong>Rủi ro dòng tiền:</strong> 500 triệu đang bị chiếm dụng, ảnh hưởng trực tiếp dòng tiền hoạt động.</li>
+                    <li><strong>Rủi ro chứng từ:</strong> Không có xác nhận công nợ làm hồ sơ yếu nếu phát sinh tranh chấp hoặc kiện tụng.</li>
+                    <li><strong>Rủi ro TNDN:</strong> Nếu trích lập dự phòng khi chưa đủ điều kiện thời gian, chi phí dự phòng có thể bị loại khỏi chi phí được trừ.</li>
+                    <li><strong>Rủi ro BCTC:</strong> TK 131 còn treo 500 triệu phải được trình bày đúng, không tự bù trừ hoặc xóa nợ khi chưa đủ hồ sơ.</li>
+                  </ol>
+
+                  <h4>HỒ SƠ PHÁP LÝ CẦN XÂY DỰNG NGAY</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Tài liệu cần có</th>
+                          <th>Mục đích</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Hợp đồng mua bán/dịch vụ gốc</td>
+                          <td>Chứng minh nghĩa vụ nợ và ngày đến hạn thanh toán.</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Hóa đơn GTGT đã xuất</td>
+                          <td>Bằng chứng công nợ phát sinh.</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Phiếu xuất kho, bàn giao hoặc nghiệm thu</td>
+                          <td>Chứng minh đã giao hàng hoặc hoàn thành dịch vụ.</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Công văn đòi nợ gửi bảo đảm</td>
+                          <td>Chứng minh đã thực hiện quyền đòi nợ và khách hàng né tránh.</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Email/Zalo/văn bản trao đổi</td>
+                          <td>Bổ sung lịch sử đòi nợ và cam kết thanh toán.</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Biên bản xác nhận công nợ một phía</td>
+                          <td>Tạo lưu vết khi khách hàng không ký xác nhận hai bên.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Gửi biên bản xác nhận công nợ kèm công văn yêu cầu phản hồi trong thời hạn cụ thể, lưu bằng chứng gửi bảo đảm.</li>
+                    <li>Lập bảng theo dõi thu hồi nợ gồm ngày liên hệ, hình thức liên hệ, nội dung, người phụ trách và kết quả.</li>
+                    <li>Đối chiếu lại hợp đồng để xác định ngày đến hạn gốc, không tính theo gia hạn miệng hoặc cam kết không có văn bản.</li>
+                    <li>Khi đủ 6 tháng quá hạn, xem xét trích lập dự phòng 30% nếu hồ sơ đầy đủ và khoản nợ vẫn chưa thu được.</li>
+                    <li>Nếu xác định không thu được, chuẩn bị hồ sơ bán nợ/xóa nợ theo thẩm quyền và tiếp tục theo dõi ngoài sổ sách.</li>
+                  </ol>
+
+                  <h4>BÚT TOÁN ĐỊNH HƯỚNG</h4>
+                  <p class="report-note">Chỉ thực hiện khi đủ điều kiện trích lập/xóa nợ và có phê duyệt nội bộ. Trường hợp mới quá hạn 120 ngày thì chưa ghi nhận dự phòng theo điều kiện thông thường.</p>
+                  <div class="report-code">
+                    <span>Khi đủ điều kiện trích lập 30%: Nợ TK 642 / Có TK 2293: 150.000.000</span>
+                    <span>Khi xử lý xóa nợ: Nợ TK 2293 + Nợ TK 642 phần còn lại / Có TK 131</span>
+                    <span>Nếu sau này thu hồi được: Nợ TK 111/112 / Có TK 711</span>
+                  </div>
+
+                  <h4>KHI NÀO CẦN CHUYỂN SANG SKILL KHÁC</h4>
+                  <ul>
+                    <li><strong>Legal Researcher:</strong> Khi cần rà thủ tục khởi kiện, thi hành án hoặc bán nợ.</li>
+                    <li><strong>Tax Risk Reviewer:</strong> Khi cần xác minh điều kiện chi phí dự phòng được trừ TNDN.</li>
+                    <li><strong>Account Reconciliation Assistant:</strong> Khi số dư TK 131 lệch giữa sổ chi tiết và BCĐSPS.</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="inventory-asset-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 05</span>
+                <h3>Tồn kho, giá vốn, TSCĐ và chi phí trả trước</h3>
+                <p>Nhóm này gom case nhập xuất tồn, giá vốn, TSCĐ, CCDC, khấu hao và chi phí trả trước 242.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-inventory">Inventory Cost Reviewer</span>
+                <span class="skill-pill-asset">Fixed Asset & Prepaid Expense Reviewer</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-inventory">
+                <span>Inventory Cost Reviewer</span>
+                <p>Rà nhập xuất tồn, giá vốn, âm kho, hàng đi đường và các bất thường TK 152/155/156/632.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="inventory-negative-stock-cogs">
+                <div class="case-meta">Inventory Cost Reviewer · COGS</div>
+                <h3>Tồn kho âm do hàng về trước hóa đơn về sau</h3>
+                <p class="case-question">Cuối tháng chạy báo cáo nhập xuất tồn phát hiện 3 mã hàng bị âm kho. Thực tế hàng đã về kho và đã xuất bán, nhưng hóa đơn đầu vào chưa về nên kế toán chưa lập phiếu nhập. Có nên khóa sổ và kết chuyển giá vốn ngay không?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Chưa nên khóa sổ hoặc kết chuyển giá vốn khi còn tồn âm.</li>
+                    <li>Trường hợp này không dùng TK 151; hàng đã về kho nhưng hóa đơn chưa về thì cần nhập kho theo giá tạm tính.</li>
+                    <li>Cần lập phiếu nhập kho theo giá tạm tính, hạch toán Nợ 156/Có 331, sau đó xử lý chênh lệch khi hóa đơn về.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="inventory-negative-stock-cogs-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="inventory-negative-stock-cogs-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức độ rủi ro:</strong> Rất cao vì tồn âm làm sai hàng tồn kho, giá vốn và có thể dẫn tới rủi ro bị loại giá vốn.</li>
+                    <li><strong>Có nên khóa sổ/kết chuyển giá vốn ngay không:</strong> Chưa. Phải lập phiếu nhập kho theo giá tạm tính cho các mã hàng âm trước.</li>
+                    <li><strong>Vùng cần kiểm gấp:</strong> TK 156, TK 632, TK 331 và bộ chứng từ giao nhận hàng thực tế.</li>
+                    <li><strong>Dữ liệu cần bổ sung:</strong> Biên bản giao nhận hàng, phiếu xuất kho bên bán và hợp đồng/báo giá để xác định giá tạm tính.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Loại vấn đề: Hàng về trước, hóa đơn về sau</span>
+                    <span>Kỳ kiểm: Cuối tháng, phát hiện khi chạy báo cáo NXT</span>
+                    <span>Tài khoản liên quan: TK 156, TK 331, TK 632, TK 1331</span>
+                    <span>Giả định: Doanh nghiệp áp dụng phương pháp kê khai thường xuyên</span>
+                  </div>
+
+                  <h4>ĐIỂM NHẦM LẪN VỀ TK 151</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Hóa đơn đã về, hàng chưa về:</strong> dùng TK 151 - hàng mua đang đi đường.</li>
+                      <li><strong>Hàng đã về kho, hóa đơn chưa về:</strong> không dùng TK 151; cần ghi nhận TK 156 theo giá tạm tính và ghi Có TK 331.</li>
+                      <li>Trong case này hàng đã về kho và đã xuất bán, nên trọng tâm là lập phiếu nhập kho tạm tính để xóa tồn âm.</li>
+                    </ul>
+                  </div>
+
+                  <h4>RỦI RO KHI ĐỂ TỒN KHO ÂM</h4>
+                  <ol>
+                    <li><strong>BCTC:</strong> Hàng tồn kho âm là vô lý về mặt vật lý, làm sai chỉ tiêu hàng tồn kho và giá vốn.</li>
+                    <li><strong>Thuế TNDN:</strong> Ghi giá vốn TK 632 nhưng thiếu phiếu nhập/hóa đơn đầu vào có thể bị loại giá vốn.</li>
+                    <li><strong>Thuế GTGT:</strong> Chưa có hóa đơn hợp pháp nên chưa ghi nhận TK 1331 để khấu trừ.</li>
+                    <li><strong>Quản trị kho:</strong> Thủ kho có hàng thực tế nhưng kế toán không có phiếu nhập làm lệch thẻ kho và sổ kế toán.</li>
+                  </ol>
+
+                  <h4>BÚT TOÁN TẠM TÍNH</h4>
+                  <div class="report-code">
+                    <span>Cuối tháng khi hàng đã về nhưng chưa có hóa đơn: Nợ TK 156 - Hàng hóa / Có TK 331 - Phải trả người bán theo giá tạm tính.</span>
+                    <span>Chưa ghi TK 1331 ở giai đoạn tạm tính vì chưa có hóa đơn hợp pháp.</span>
+                    <span>Sau khi lập phiếu nhập tạm tính và xuất kho hợp lệ: Nợ TK 632 / Có TK 156 theo giá tạm tính.</span>
+                  </div>
+
+                  <h4>KHI HÓA ĐƠN VỀ THÁNG SAU</h4>
+                  <div class="report-code">
+                    <span>Xóa/đảo bút toán tạm tính nếu phần mềm và chính sách kế toán cho phép, sau đó ghi lại theo hóa đơn.</span>
+                    <span>Ghi nhận đúng hóa đơn: Nợ TK 156, Nợ TK 1331 / Có TK 331 theo tổng giá thanh toán.</span>
+                    <span>Tính và điều chỉnh lại TK 632 nếu giá tạm tính lệch giá thực tế.</span>
+                  </div>
+
+                  <h4>CHECKLIST TRƯỚC KHI KHÓA SỔ</h4>
+                  <ul>
+                    <li>Lập phiếu nhập kho Mẫu 01-VT theo giá tạm tính.</li>
+                    <li>Hạch toán Nợ 156 / Có 331 theo giá chưa VAT.</li>
+                    <li>Kiểm tra thẻ kho Mẫu S12-DN theo số lượng thực nhập, không chờ hóa đơn.</li>
+                    <li>Lập biên bản xác nhận hàng đã nhận thực tế với nhà cung cấp.</li>
+                    <li>Điều chỉnh lại giá vốn TK 632 khi hóa đơn về và có giá thực tế.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <div class="case-subgroup-heading skill-section-asset">
+                <span>Fixed Asset & Prepaid Expense Reviewer</span>
+                <p>Phân loại TSCĐ, CCDC, chi phí trả trước; rà TK 211/213/153/214/242, khấu hao và phân bổ.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="asset-laptop-software-242">
+                <div class="case-meta">Fixed Asset & Prepaid Expense Reviewer · 211/213/153/242</div>
+                <h3>Phân loại laptop 28 triệu và phần mềm kế toán 35 triệu</h3>
+                <p class="case-question">Công ty vừa mua 1 laptop 28 triệu chưa VAT cho giám đốc và 1 phần mềm kế toán 35 triệu. Nên ghi nhận TSCĐ, CCDC hay chi phí trả trước? Rủi ro thuế nếu phân loại sai là gì?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Laptop 28 triệu thường không đạt ngưỡng ghi nhận TSCĐ, nên theo dõi CCDC và phân bổ qua TK 242.</li>
+                    <li>Phần mềm 35 triệu phải xét bản chất hợp đồng: sở hữu vĩnh viễn có thể là TK 213, license có thời hạn thường là TK 242.</li>
+                    <li>Không nên đưa toàn bộ vào chi phí một kỳ nếu lợi ích sử dụng kéo dài nhiều kỳ.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="asset-laptop-software-242-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="asset-laptop-software-242-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Khoản mục</th>
+                          <th>Phân loại đề xuất</th>
+                          <th>Rủi ro nếu sai</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Laptop 28 triệu</td>
+                          <td>CCDC TK 153, xuất dùng và phân bổ qua TK 242</td>
+                          <td><span class="status-risk">Rủi ro TNDN nếu ghi chi phí một lần</span></td>
+                        </tr>
+                        <tr>
+                          <td>Phần mềm kế toán 35 triệu</td>
+                          <td>TK 213 nếu sở hữu vĩnh viễn; TK 242 nếu license/SaaS có thời hạn</td>
+                          <td><span class="status-risk">Rủi ro bị xuất toán phần phân bổ/khấu hao sai</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>TIÊU CHÍ PHÂN LOẠI</h4>
+                  <ul>
+                    <li>TSCĐ cần có lợi ích kinh tế trong tương lai, nguyên giá xác định tin cậy, thời gian sử dụng trên 1 năm và đạt ngưỡng giá trị theo quy định.</li>
+                    <li>Laptop 28 triệu dưới ngưỡng 30 triệu theo tình huống đã rà soát, nên không vội ghi TK 211.</li>
+                    <li>Phần mềm 35 triệu vượt ngưỡng giá trị nhưng phải đọc hợp đồng để xác định có quyền sở hữu tài sản vô hình hay chỉ là phí license trả trước.</li>
+                  </ul>
+
+                  <h4>BẢNG PHÂN LOẠI PHẦN MỀM</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Bản chất hợp đồng</th>
+                          <th>Phân loại</th>
+                          <th>Tài khoản</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>License vĩnh viễn/quyền sở hữu, dùng trên 1 năm và trên 30 triệu</td>
+                          <td>TSCĐ vô hình</td>
+                          <td>TK 213</td>
+                        </tr>
+                        <tr>
+                          <td>License 1-2 năm, thuê bao, SaaS hoặc phí dịch vụ đám mây trả trước</td>
+                          <td>Chi phí trả trước</td>
+                          <td>TK 242</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>BÚT TOÁN GỢI Ý</h4>
+                  <div class="report-code">
+                    <span>Laptop mua nhập kho: Nợ TK 153 28.000.000; Nợ TK 1331 2.800.000 / Có TK 331 hoặc 112 30.800.000.</span>
+                    <span>Xuất dùng laptop: Nợ TK 242 28.000.000 / Có TK 153 28.000.000.</span>
+                    <span>Phân bổ laptop 24 tháng: Nợ TK 642 1.167.000 / Có TK 242 1.167.000 mỗi tháng.</span>
+                    <span>Phần mềm nếu là TK 213: Nợ TK 213 35.000.000; Nợ TK 1332 3.500.000 / Có TK 331 hoặc 112 38.500.000.</span>
+                    <span>Phần mềm nếu là TK 242: Nợ TK 242 35.000.000; Nợ TK 1331 3.500.000 / Có TK 331 hoặc 112 38.500.000.</span>
+                  </div>
+
+                  <h4>HỒ SƠ CẦN CÓ</h4>
+                  <ul>
+                    <li>Hợp đồng, báo giá hoặc đơn đặt hàng để xác định bản chất mua tài sản hay thuê quyền sử dụng.</li>
+                    <li>Hóa đơn GTGT và chứng từ thanh toán không dùng tiền mặt vì từng khoản đều trên 5 triệu.</li>
+                    <li>Biên bản bàn giao/nghiệm thu, quyết định xuất dùng CCDC hoặc quyết định ghi tăng TSCĐ.</li>
+                    <li>Bảng phân bổ CCDC hoặc bảng khấu hao TSCĐ vô hình, kèm thời gian phân bổ/khấu hao hợp lý.</li>
+                  </ul>
+
+                  <h4>RỦI RO THUẾ NẾU PHÂN LOẠI SAI</h4>
+                  <ol>
+                    <li>Ghi toàn bộ laptop 28 triệu vào chi phí một kỳ có thể bị loại phần chi phí chưa phân bổ hợp lý.</li>
+                    <li>Ghi phần mềm 35 triệu vào chi phí một kỳ có thể bị xuất toán nếu hợp đồng thể hiện lợi ích nhiều kỳ.</li>
+                    <li>Ghi TK 213 cho phần mềm thuê bao/SaaS có thời hạn có thể làm sai bản chất tài sản và khấu hao.</li>
+                    <li>Thanh toán tiền mặt cho khoản trên 5 triệu làm tăng rủi ro VAT đầu vào và chi phí được trừ.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>TT99/2025/TT-BTC:</strong> dùng để đối chiếu cách phân loại TK 211, TK 213 và TK 242.</li>
+                      <li><strong>Nghị định 320/2025/NĐ-CP:</strong> cần kiểm quy định về thời gian phân bổ CCDC và rủi ro chi phí không được trừ khi khấu hao/phân bổ sai.</li>
+                      <li><strong>TT45/2013/TT-BTC:</strong> cần xác minh khung khấu hao phần mềm và phiên bản văn bản hiện hành khi áp dụng thực tế.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="payroll-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 06</span>
+                <h3>Lương, bảo hiểm và thuế TNCN</h3>
+                <p>Nhóm này gom các case liên quan đến bảng lương, hồ sơ lao động, BHXH/BHYT/BHTN và quyết toán TNCN.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-payroll">Payroll BHXH TNCN Assistant</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-payroll">
+                <span>Payroll BHXH TNCN Assistant</span>
+                <p>Kiểm hồ sơ lương, phụ cấp, lao động thời vụ, BHXH và nghĩa vụ khấu trừ/kê khai TNCN.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="payroll-sale-allowance-risk">
+                <div class="case-meta">Payroll BHXH TNCN · Phụ cấp sale</div>
+                <h3>Phụ cấp xăng xe 2 triệu và điện thoại 1 triệu không có quy chế</h3>
+                <p class="case-question">Công ty chi phụ cấp xăng xe 2 triệu/tháng và điện thoại 1 triệu/tháng cho nhân viên Sale bằng chuyển khoản, nhưng hợp đồng lao động và quy chế tài chính không quy định mức chi cụ thể.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Rủi ro TNDN và TNCN cao nếu gọi là phụ cấp nhưng không có quy chế/định mức rõ ràng.</li>
+                    <li>Rủi ro BHXH thấp hơn, nhưng không đóng BHXH không đồng nghĩa được miễn TNCN hoặc được tính chi phí TNDN.</li>
+                    <li>Cần chuyển bản chất thành khoán chi phí công việc, có quy chế, phụ lục HĐLĐ, bảng lương và UNC.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="payroll-sale-allowance-risk-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="payroll-sale-allowance-risk-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>TNDN:</strong> Rủi ro cao nếu khoản chi không ghi rõ điều kiện, đối tượng và mức hưởng trong hồ sơ nội bộ.</li>
+                    <li><strong>TNCN:</strong> Rủi ro cao nếu vẫn gọi là phụ cấp, không có quy chế khoán chi phí phục vụ công việc.</li>
+                    <li><strong>BHXH:</strong> Rủi ro thấp hơn vì hỗ trợ xăng xe/điện thoại thường không thuộc căn cứ đóng BHXH, nhưng cần kiểm phiên bản quy định hiện hành.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Khoản chi 1: Phụ cấp xăng xe 2.000.000 VNĐ/tháng/người</span>
+                    <span>Khoản chi 2: Phụ cấp điện thoại 1.000.000 VNĐ/tháng/người</span>
+                    <span>Đối tượng: Nhân viên Sale</span>
+                    <span>Thanh toán: Chuyển khoản</span>
+                    <span>Hồ sơ đang thiếu: HĐLĐ/quy chế chưa quy định mức chi cụ thể</span>
+                  </div>
+
+                  <h4>PHÂN TÍCH TNDN, TNCN VÀ BHXH</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Sắc thuế/khoản mục</th>
+                          <th>Rủi ro</th>
+                          <th>Cách xử lý</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>TNDN</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Ban hành quy chế chi tiêu hoặc quyết định định mức khoán chi phí cho sale.</td>
+                        </tr>
+                        <tr>
+                          <td>TNCN</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Đổi bản chất từ phụ cấp thành khoán chi phí công việc trong định mức.</td>
+                        </tr>
+                        <tr>
+                          <td>BHXH/BHYT/BHTN</td>
+                          <td><span class="status-ok">Thấp</span></td>
+                          <td>Theo dõi riêng, không gộp vào tiền lương đóng BHXH nếu đáp ứng điều kiện loại trừ.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>HỒ SƠ CẦN BỔ SUNG</h4>
+                  <ul>
+                    <li>Quy chế chi tiêu nội bộ hoặc quyết định định mức khoán chi phí công tác cho nhân viên Sale.</li>
+                    <li>Phụ lục HĐLĐ hoặc văn bản thông báo chính sách khoán chi phí đi lại/liên lạc.</li>
+                    <li>Bảng lương đổi tên cột từ phụ cấp sang khoán chi phí đi lại/khoán chi phí liên lạc.</li>
+                    <li>Ủy nhiệm chi chuyển khoản và danh sách nhân viên được hưởng theo bộ phận/chức danh.</li>
+                  </ul>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Soạn quy chế chi tiêu nội bộ ghi rõ Sale được khoán xăng tối đa 2 triệu/tháng và điện thoại tối đa 1 triệu/tháng để phục vụ công việc.</li>
+                    <li>Đổi cách trình bày trên bảng lương: từ phụ cấp xăng xe/điện thoại sang khoán chi phí đi lại/liên lạc.</li>
+                    <li>Lưu trọn bộ hồ sơ gồm quy chế, phụ lục HĐLĐ, bảng lương, UNC và danh sách nhân viên.</li>
+                    <li>Rà lại các tháng đã chi để đánh giá có cần điều chỉnh TNCN hoặc hồ sơ chi phí không.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Nghị định 320/2025/NĐ-CP:</strong> khoản phụ cấp không ghi điều kiện/mức hưởng có rủi ro không được tính vào chi phí được trừ.</li>
+                      <li><strong>Điều 3 Luật Thuế TNCN số 109/2025/QH15:</strong> phụ cấp là thu nhập chịu thuế nếu không chứng minh được là khoản khoán chi phục vụ công việc trong định mức.</li>
+                      <li><strong>Thông tư 10/2020/TT-BLĐTBXH:</strong> cần kiểm lại phiên bản hiện hành khi xác định phụ cấp xăng xe, điện thoại có tính vào căn cứ đóng BHXH hay không.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="payroll-student-seasonal-3m">
+                <div class="case-meta">Payroll BHXH TNCN · Lao động thời vụ</div>
+                <h3>Thuê sinh viên thời vụ 3 triệu/người bằng tiền mặt</h3>
+                <p class="case-question">Công ty thuê sinh viên chạy sự kiện 5 ngày, thù lao 3 triệu/người, trả tiền mặt. Sinh viên chưa có mã số thuế cá nhân. Cần xử lý TNCN, BHXH và bộ chứng từ chi phí thế nào?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Thu nhập 3 triệu/lần vượt ngưỡng 2 triệu, phải xử lý TNCN bằng khấu trừ 10% hoặc cam kết 08/CK-TNCN nếu đủ điều kiện.</li>
+                    <li>Lao động thời vụ dưới 3 tháng thường không thuộc diện BHXH/BHYT/BHTN bắt buộc.</li>
+                    <li>Cần thu CCCD, hợp đồng giao khoán, bảng chấm công, bảng thanh toán ký nhận và hồ sơ TNCN.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="payroll-student-seasonal-3m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="payroll-student-seasonal-3m-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>TNCN:</strong> Có rủi ro. Khoản 3 triệu/lần cần khấu trừ 10% hoặc thu cam kết 08/CK-TNCN nếu cá nhân đủ điều kiện.</li>
+                    <li><strong>BHXH:</strong> Rủi ro thấp nếu lao động thời vụ dưới 3 tháng, không thuộc diện tham gia bắt buộc.</li>
+                    <li><strong>Điểm cần làm trước khi chi:</strong> Thu CCCD, ký hợp đồng giao khoán và cam kết 08/CK-TNCN nếu không khấu trừ.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT NGHIỆP VỤ</h4>
+                  <div class="report-facts">
+                    <span>Đối tượng: Sinh viên thời vụ dưới 3 tháng</span>
+                    <span>Thời gian làm việc: 5 ngày chạy sự kiện</span>
+                    <span>Thù lao: 3.000.000 VNĐ/người/lần</span>
+                    <span>Thanh toán: Tiền mặt</span>
+                    <span>Giả định: Mỗi sinh viên chỉ nhận một lần trong năm từ công ty</span>
+                  </div>
+
+                  <h4>PHƯƠNG ÁN XỬ LÝ TNCN</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Tình huống</th>
+                          <th>Cách xử lý</th>
+                          <th>Số tiền</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Sinh viên không ký cam kết 08/CK-TNCN</td>
+                          <td>Khấu trừ 10% TNCN trước khi chi trả.</td>
+                          <td>Thực nhận 2.700.000; thuế TNCN 300.000</td>
+                        </tr>
+                        <tr>
+                          <td>Sinh viên ký cam kết 08/CK-TNCN và đủ điều kiện</td>
+                          <td>Không khấu trừ tại thời điểm chi trả.</td>
+                          <td>Chi đủ 3.000.000</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>HỒ SƠ CHỨNG TỪ CẦN CÓ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Hồ sơ</th>
+                          <th>Mục đích</th>
+                          <th>Trạng thái cần có</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Hợp đồng giao khoán/thời vụ</td>
+                          <td>Xác định công việc, thời gian, thù lao.</td>
+                          <td><span class="status-risk">Cần lập</span></td>
+                        </tr>
+                        <tr>
+                          <td>CCCD từng sinh viên</td>
+                          <td>Dùng số định danh làm MST khi kê khai.</td>
+                          <td><span class="status-risk">Cần thu</span></td>
+                        </tr>
+                        <tr>
+                          <td>Bảng chấm công/xác nhận hoàn thành</td>
+                          <td>Chứng minh công việc thực tế.</td>
+                          <td><span class="status-risk">Cần bổ sung</span></td>
+                        </tr>
+                        <tr>
+                          <td>Bảng thanh toán có chữ ký nhận</td>
+                          <td>Chứng minh khoản chi thực tế nếu trả tiền mặt.</td>
+                          <td><span class="status-risk">Bắt buộc</span></td>
+                        </tr>
+                        <tr>
+                          <td>Cam kết 08/CK-TNCN</td>
+                          <td>Căn cứ không khấu trừ 10% nếu cá nhân đủ điều kiện.</td>
+                          <td><span class="status-risk">Cần thu nếu không khấu trừ</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>BÚT TOÁN ĐỊNH HƯỚNG</h4>
+                  <div class="report-code">
+                    <span>Nếu không khấu trừ do có cam kết hợp lệ: Nợ TK 642/641 / Có TK 111: 3.000.000</span>
+                    <span>Nếu khấu trừ 10%: Nợ TK 642/641: 3.000.000 / Có TK 111: 2.700.000 / Có TK 3335: 300.000</span>
+                  </div>
+
+                  <h4>ĐIỂM BẪY THƯỜNG GẶP</h4>
+                  <ol>
+                    <li>Nghĩ sinh viên chưa có MST thì không cần xử lý TNCN. Cần kiểm việc sử dụng số định danh trên CCCD làm MST cá nhân.</li>
+                    <li>Không thu cam kết 08/CK-TNCN nhưng vẫn chi đủ 3 triệu, dẫn đến rủi ro truy thu 10% và phạt chậm nộp.</li>
+                    <li>Bảng thanh toán tiền mặt không có chữ ký từng người nhận, làm yếu căn cứ chi phí thực tế.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điều 11 Luật Quản lý Thuế số 108/2025/QH15:</strong> cần kiểm quy định về MST cá nhân gắn với số định danh trên CCCD.</li>
+                      <li><strong>Mẫu 08/CK-TNCN:</strong> dùng trong trường hợp cá nhân cam kết thu nhập cả năm chưa đến mức nộp thuế để công ty không khấu trừ 10%.</li>
+                      <li><strong>Tờ khai 05/KK-TNCN:</strong> cần kê khai cá nhân có thu nhập tiền lương, tiền công, kể cả trường hợp không khấu trừ do có cam kết.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="reconciliation-error-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 07</span>
+                <h3>Đối chiếu số liệu và sửa lỗi kế toán</h3>
+                <p>Nhóm này gom các case lệch sổ, sai kỳ, sai tài khoản, thiếu/trùng chứng từ và cách khoanh vùng nguyên nhân.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-reconciliation">Account Reconciliation Assistant</span>
+                <span class="skill-pill-error">Accounting Error Fixer</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-reconciliation">
+                <span>Account Reconciliation Assistant</span>
+                <p>Đối chiếu giữa sổ cái, sổ chi tiết, sao kê, công nợ và chứng từ xác nhận.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="recon-ar-ap-131-331">
+                <div class="case-meta">Account Reconciliation · Công nợ 131/331</div>
+                <h3>Công nợ âm 131 và lệch xác nhận 331</h3>
+                <p class="case-question">Sổ chi tiết phát hiện TK 131 có số dư Có kéo dài ở một số khách hàng. Đồng thời TK 331 trên phần mềm lệch biên bản xác nhận công nợ nhà cung cấp khoảng 20 triệu.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>TK 131 dư Có có thể là dấu hiệu đã thu tiền nhưng chưa xuất hóa đơn hoặc chưa ghi nhận doanh thu.</li>
+                    <li>TK 331 lệch xác nhận NCC cần kiểm hàng về, hóa đơn chưa hạch toán, tiền đang chuyển, chiết khấu hoặc cấn trừ.</li>
+                    <li>Không tự bù trừ số dư 131/331 trên BCTC trước khi xác định đúng đối tượng và nguyên nhân lệch.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="recon-ar-ap-131-331-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="recon-ar-ap-131-331-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Loại lệch:</strong> Công nợ bất thường, gồm TK 131 dư Có kéo dài và TK 331 lệch xác nhận nhà cung cấp 20 triệu.</li>
+                    <li><strong>Mức ưu tiên:</strong> Rất cao vì TK 131 âm có thể liên quan đến doanh thu, hóa đơn và thuế GTGT đầu ra.</li>
+                    <li><strong>Chưa nên làm:</strong> Không xóa chứng từ, không bù trừ tổng số dư, không điều chỉnh khi chưa có bảng đối chiếu từng đối tượng.</li>
+                    <li><strong>Dữ liệu cần bổ sung:</strong> Sổ chi tiết TK 131/331, biên bản xác nhận công nợ NCC, sao kê ngân hàng và hóa đơn liên quan.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT ĐIỂM LỆCH</h4>
+                  <div class="report-facts">
+                    <span>Tài khoản liên quan: TK 131, 331, 113, 151, 511, 3331</span>
+                    <span>Nguồn A: Sổ cái/sổ chi tiết nội bộ</span>
+                    <span>Nguồn B: Biên bản xác nhận công nợ nhà cung cấp</span>
+                    <span>Số lệch TK 331: Khoảng 20.000.000 VNĐ</span>
+                  </div>
+
+                  <h4>QUY TRÌNH KHOANH VÙNG</h4>
+                  <ol>
+                    <li><strong>Trích sổ chi tiết từng đối tượng:</strong> In S31-DN cho TK 131 và TK 331, lọc đối tượng có số dư Có hoặc lệch xác nhận.</li>
+                    <li><strong>So từng dòng với xác nhận NCC:</strong> Đối chiếu số hóa đơn, ngày, số tiền, chiết khấu, giảm giá, thanh toán và công nợ còn lại.</li>
+                    <li><strong>Truy nguyên TK 131 dư Có:</strong> Kiểm đã giao hàng/cung cấp dịch vụ chưa, đã xuất hóa đơn chưa, có ghi nhận TK 511/3331 chưa.</li>
+                    <li><strong>Kiểm tiền đang chuyển và hàng mua đang đi đường:</strong> Rà TK 113, TK 151 nếu thời điểm ghi nhận giữa hai bên lệch nhau.</li>
+                  </ol>
+
+                  <h4>NGUYÊN NHÂN KHẢ DĨ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Nguyên nhân</th>
+                          <th>Khả năng</th>
+                          <th>Cách kiểm</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Đã thu tiền khách hàng nhưng chưa xuất hóa đơn/ghi nhận doanh thu</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Đối chiếu TK 131 dư Có với TK 511, 3331 theo từng khách hàng.</td>
+                        </tr>
+                        <tr>
+                          <td>Hạch toán nhầm mã khách hàng</td>
+                          <td><span class="status-risk">Cần kiểm</span></td>
+                          <td>Tìm giao dịch cùng số tiền, cùng ngày nhưng sai mã đối tượng.</td>
+                        </tr>
+                        <tr>
+                          <td>Hàng đã về hoặc hóa đơn NCC đã xuất nhưng bên mình chưa hạch toán</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Kiểm phiếu nhập kho, TK 151 và hóa đơn đầu vào.</td>
+                        </tr>
+                        <tr>
+                          <td>Tiền đang chuyển hoặc UNC chưa được NCC ghi nhận</td>
+                          <td><span class="status-risk">Cần kiểm</span></td>
+                          <td>Đối chiếu sao kê ngân hàng, TK 113 và xác nhận nhận tiền của NCC.</td>
+                        </tr>
+                        <tr>
+                          <td>Cấn trừ công nợ chưa lập biên bản</td>
+                          <td><span class="status-risk">Cần kiểm</span></td>
+                          <td>Tìm đối tượng vừa là khách hàng vừa là nhà cung cấp.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>HƯỚNG XỬ LÝ ĐỀ XUẤT</h4>
+                  <ol>
+                    <li>Nếu TK 131 âm do giao hàng xong nhưng chưa xuất hóa đơn: xuất hóa đơn, kê khai thuế và ghi nhận doanh thu đúng kỳ.</li>
+                    <li>Nếu sai mã khách hàng: điều chỉnh nội bộ giữa các mã đối tượng, không làm thay đổi tổng công nợ.</li>
+                    <li>Nếu TK 331 lệch do hóa đơn/hàng đã về chưa hạch toán: ghi bổ sung Nợ TK 152/156, Nợ TK 133, Có TK 331.</li>
+                    <li>Nếu lệch do tiền đang chuyển: theo dõi TK 113 và tất toán khi NCC xác nhận nhận tiền.</li>
+                    <li>Nếu cấn trừ công nợ: lập biên bản bù trừ có chữ ký hai bên trước khi hạch toán Nợ TK 331/Có TK 131.</li>
+                  </ol>
+
+                  <h4>ĐỀ XUẤT QUÉT FILE TỰ ĐỘNG</h4>
+                  <p>Tải lên sổ chi tiết TK 131, TK 331 dạng Excel/CSV và biên bản xác nhận công nợ NCC. Có thể dùng Python/pandas để merge theo mã đối tượng, số hóa đơn, ngày và số tiền, sau đó xuất danh sách dòng chỉ có ở sổ NCC hoặc chỉ có ở sổ nội bộ.</p>
+
+                  <h4>CĂN CỨ/RỦI RO LIÊN QUAN</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li>TK 131 âm do chưa xuất hóa đơn hoặc chưa ghi nhận doanh thu có thể bị xem là dấu hiệu giấu doanh thu, phát sinh rủi ro thuế GTGT và TNDN.</li>
+                      <li>Rủi ro thuế có thể bị xem xét theo Điều 45 Luật Quản lý Thuế số 108/2025/QH15 nếu hành vi làm giảm số thuế phải nộp.</li>
+                      <li>Với cấn trừ công nợ, cần có biên bản đối chiếu/xác nhận bù trừ giữa hai bên để bảo vệ điều kiện thanh toán không dùng tiền mặt.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <div class="case-subgroup-heading skill-section-error">
+                <span>Accounting Error Fixer</span>
+                <p>Khoanh vùng sai kỳ, sai tài khoản, sai đối tượng, thiếu/trùng chứng từ và hướng điều chỉnh.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="error-missed-material-invoice-prior-year">
+                <div class="case-meta">Accounting Error Fixer · Sót hóa đơn năm trước</div>
+                <h3>Bỏ sót hóa đơn mua nguyên vật liệu 200 triệu từ năm trước</h3>
+                <p class="case-question">Tháng 11 năm trước có hóa đơn mua nguyên vật liệu 200 triệu, VAT 10%, nhưng kế toán chưa ghi nhận. BCTC năm trước đã nộp. Có được sửa trực tiếp chứng từ cũ không, kê khai VAT thế nào và hạch toán năm nay ra sao?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Không sửa trực tiếp sổ năm trước vì BCTC và tờ khai đã nộp.</li>
+                    <li>Cần đánh giá khoản 200 triệu có trọng yếu không trước khi quyết định điều chỉnh hồi tố.</li>
+                    <li>Nếu không trọng yếu, hạch toán bổ sung trong năm phát hiện và lưu hồ sơ giải trình đầy đủ.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="error-missed-material-invoice-prior-year-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="error-missed-material-invoice-prior-year-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Loại sai sót:</strong> Bỏ sót hóa đơn đầu vào, thiếu ghi nhận tài sản/chi phí, VAT và công nợ.</li>
+                    <li><strong>Mức rủi ro:</strong> Trung bình đến cao nếu khoản 200 triệu làm sai lệch trọng yếu BCTC hoặc thuế TNDN năm trước.</li>
+                    <li><strong>Không được làm:</strong> Không sửa trực tiếp chứng từ/sổ năm trước khi BCTC đã nộp.</li>
+                    <li><strong>Hành động ưu tiên:</strong> Đánh giá trọng yếu, gom hồ sơ chứng minh hàng đã nhập kho từ năm trước rồi hạch toán theo phương án phù hợp.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT SAI SÓT</h4>
+                  <div class="report-facts">
+                    <span>Kỳ phát sinh: Tháng 11 năm trước</span>
+                    <span>Chứng từ sót: Hóa đơn mua nguyên vật liệu 200.000.000, VAT 10%</span>
+                    <span>Bút toán đúng lẽ ra ghi: Nợ 152, Nợ 1331 / Có 331</span>
+                    <span>Trạng thái báo cáo: BCTC năm trước và tờ khai đã nộp</span>
+                    <span>Giả định xử lý: Sai sót không trọng yếu</span>
+                  </div>
+
+                  <h4>ẢNH HƯỞNG CẦN ĐÁNH GIÁ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Khu vực</th>
+                          <th>Ảnh hưởng</th>
+                          <th>Cần kiểm</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Sổ kế toán</td>
+                          <td>Thiếu TK 152 hoặc sai TK 632, thiếu công nợ TK 331.</td>
+                          <td>Hàng còn tồn kho hay đã xuất dùng? Có phiếu nhập/biên bản giao nhận năm trước không?</td>
+                        </tr>
+                        <tr>
+                          <td>Thuế</td>
+                          <td>Chưa kê khai 20 triệu VAT đầu vào, có thể làm sai thuế TNDN năm trước.</td>
+                          <td>VAT đầu vào làm giảm thuế phải nộp hay tăng khấu trừ chuyển kỳ sau?</td>
+                        </tr>
+                        <tr>
+                          <td>BCTC</td>
+                          <td>Sai hàng tồn kho, công nợ phải trả và lợi nhuận sau thuế năm trước.</td>
+                          <td>Đánh giá trọng yếu của 200 triệu trên tổng tài sản/doanh thu.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>PHƯƠNG ÁN XỬ LÝ THEO TÌNH HUỐNG</h4>
+                  <ol>
+                    <li><strong>Thuế GTGT:</strong> Nếu hóa đơn sót làm tăng số thuế được khấu trừ và chỉ làm giảm thuế phải nộp hoặc tăng khấu trừ chuyển kỳ sau, cân nhắc kê khai vào kỳ hiện tại theo hướng xử lý an toàn.</li>
+                    <li><strong>Kế toán/BCTC:</strong> Nếu không trọng yếu, không điều chỉnh hồi tố; hạch toán bổ sung vào sổ kế toán năm nay.</li>
+                    <li><strong>Nếu trọng yếu:</strong> Xem xét điều chỉnh hồi tố bằng số dư đầu năm TK 4211 và trình bày lại cột số đầu năm trên BCTC năm nay.</li>
+                    <li><strong>Thuế TNDN:</strong> Rà ảnh hưởng thuế TNDN năm trước và lập hồ sơ giải trình nếu phát sinh điều chỉnh.</li>
+                  </ol>
+
+                  <h4>BÚT TOÁN ĐỊNH HƯỚNG</h4>
+                  <div class="report-code">
+                    <span>Nếu vật tư còn trong kho: Nợ TK 152: 200.000.000; Nợ TK 1331: 20.000.000 / Có TK 331: 220.000.000.</span>
+                    <span>Nếu vật tư đã xuất dùng: Nợ TK 632/642..., Nợ TK 1331 / Có TK 331 theo hồ sơ thực tế.</span>
+                    <span>Nếu xác định trọng yếu: xem xét bút toán điều chỉnh hồi tố theo chính sách kế toán và phê duyệt nội bộ.</span>
+                  </div>
+
+                  <h4>HỒ SƠ CẦN LƯU</h4>
+                  <ul>
+                    <li>Hóa đơn mua nguyên vật liệu bị sót.</li>
+                    <li>Phiếu nhập kho và biên bản giao nhận năm trước chứng minh hàng đã về.</li>
+                    <li>Biên bản giải trình lý do sót hóa đơn có phê duyệt của kế toán trưởng/giám đốc.</li>
+                    <li>Chứng từ thanh toán chuyển khoản để bảo vệ điều kiện khấu trừ VAT và chi phí.</li>
+                  </ul>
+
+                  <h4>RỦI RO NẾU XỬ LÝ SAI</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li>Sửa thẳng vào sổ năm trước có thể làm thay đổi BCTC đã nộp và phá vỡ tính liên tục dữ liệu.</li>
+                      <li>Kê khai VAT bổ sung sai kỳ có thể phát sinh rủi ro kê khai sai.</li>
+                      <li>Thiếu chứng từ thanh toán không dùng tiền mặt có thể làm mất quyền khấu trừ VAT hoặc chi phí được trừ.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="closing-reporting-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 08</span>
+                <h3>Khóa sổ cuối kỳ và rà soát báo cáo</h3>
+                <p>Nhóm này tập trung vào checklist cuối tháng/quý/năm, bút toán cuối kỳ và logic BCTC.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-closing">Month-End Closing Assistant</span>
+                <span class="skill-pill-reporting">Financial Statement Reviewer</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-closing">
+                <span>Month-End Closing Assistant</span>
+                <p>Rà bất thường trước khóa sổ, chốt tài khoản trọng yếu và xác định dữ liệu cần bổ sung.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="closing-inventory-vat-ar-spike">
+                <div class="case-meta">Month-End Closing Assistant · Khóa sổ tháng</div>
+                <h3>Tồn kho tăng đột biến, VAT đầu vào lớn và công nợ cao</h3>
+                <p class="case-question">Doanh thu tháng này 5 tỷ, giá vốn 4.5 tỷ. Tồn kho đầu kỳ 1 tỷ, cuối kỳ lên 6 tỷ. VAT đầu vào còn khấu trừ 800 triệu, phải thu khách hàng 4 tỷ. Cần review nhanh trước khi khóa sổ.</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Chưa nên khóa sổ vì tồn kho, VAT đầu vào và công nợ đều có dấu hiệu bất thường.</li>
+                    <li>Cần kiểm hàng đi đường, xuất thiếu giá vốn, hóa đơn đầu vào và điều kiện thanh toán.</li>
+                    <li>Cần bổ sung BCĐSPS, báo cáo nhập xuất tồn và bảng công nợ 131/331 trước khi chốt kỳ.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="closing-inventory-vat-ar-spike-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="closing-inventory-vat-ar-spike-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Trạng thái khóa sổ:</strong> Chưa nên khóa sổ do rủi ro cao về thuế và sai lệch dữ liệu.</li>
+                    <li><strong>Mảng cần kiểm gấp:</strong> Hàng tồn kho, hóa đơn đầu vào, điều kiện thanh toán và công nợ phải thu.</li>
+                    <li><strong>Rủi ro lớn nhất:</strong> Hạch toán sai hàng đi đường, xuất thiếu giá vốn hoặc ghi nhận VAT đầu vào lớn không khớp luân chuyển hàng hóa.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT BỐI CẢNH</h4>
+                  <div class="report-facts">
+                    <span>Kỳ khóa sổ: Cuối tháng</span>
+                    <span>Doanh thu: 5.000.000.000 VNĐ</span>
+                    <span>Giá vốn: 4.500.000.000 VNĐ</span>
+                    <span>Tồn kho: Tăng từ 1 tỷ lên 6 tỷ</span>
+                    <span>VAT đầu vào còn khấu trừ: 800.000.000 VNĐ</span>
+                    <span>Phải thu khách hàng: 4.000.000.000 VNĐ</span>
+                  </div>
+
+                  <h4>ĐIỂM BẤT THƯỜNG VÀ RỦI RO TRỌNG YẾU</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Khu vực</th>
+                          <th>Dấu hiệu</th>
+                          <th>Việc cần kiểm</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Tồn kho và giá vốn</td>
+                          <td>Tồn kho tăng 5 tỷ trong khi doanh thu 5 tỷ, giá vốn 4.5 tỷ.</td>
+                          <td>Rà TK 151/152/156 và TK 632, kiểm hàng đi đường, phiếu nhập/xuất kho.</td>
+                        </tr>
+                        <tr>
+                          <td>VAT đầu vào</td>
+                          <td>VAT còn khấu trừ 800 triệu, tương đương lượng mua vào rất lớn.</td>
+                          <td>Lọc hóa đơn đầu vào giá trị lớn, kiểm hợp đồng, bàn giao và UNC.</td>
+                        </tr>
+                        <tr>
+                          <td>Công nợ phải thu</td>
+                          <td>Phải thu 4 tỷ, chiếm 80% doanh thu tháng.</td>
+                          <td>Gửi xác nhận công nợ, kiểm thu tiền, cấn trừ và aging.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>TÀI KHOẢN CẦN SOÁT XÉT GẤP</h4>
+                  <ul>
+                    <li><strong>TK 151/156:</strong> Khớp biên bản giao nhận hàng thực tế xem hàng đã về kho hay còn đang đi đường.</li>
+                    <li><strong>TK 632/511:</strong> Kiểm hóa đơn bán ra nào chưa có phiếu xuất kho hoặc chưa kết chuyển giá vốn tương ứng.</li>
+                    <li><strong>TK 1331:</strong> Lọc hóa đơn mua vào từ 5 triệu đồng trở lên để kiểm chứng từ thanh toán không dùng tiền mặt.</li>
+                    <li><strong>TK 131/331:</strong> Xin xác nhận công nợ từ khách hàng/nhà cung cấp lớn.</li>
+                  </ul>
+
+                  <h4>VIỆC CẦN LÀM TRƯỚC KHI KHÓA SỔ</h4>
+                  <ol>
+                    <li>Kiểm kê kho đột xuất để xác định tồn kho 6 tỷ trên sổ có khớp thực tế hay không.</li>
+                    <li>Lập bảng kê mua vào, lọc nhà cung cấp chiếm tỷ trọng lớn trong VAT đầu vào 800 triệu.</li>
+                    <li>Đối chiếu hóa đơn, hợp đồng, biên bản giao nhận, UNC và tình trạng nhập kho.</li>
+                    <li>Gửi đối chiếu công nợ tháng cho khách hàng lớn và phân loại tuổi nợ.</li>
+                    <li>Chỉ khóa sổ khi các khoản treo TK 151/156/632/1331/131 đã được giải thích.</li>
+                  </ol>
+
+                  <h4>ĐỀ XUẤT QUÉT FILE TỰ ĐỘNG</h4>
+                  <p>Tải lên BCĐSPS, báo cáo nhập xuất tồn và bảng công nợ 131/331 dạng Excel/CSV. Có thể dùng Python/pandas để lọc mã hàng âm, tìm hóa đơn bán chưa có xuất kho, hóa đơn mua chưa có UNC và công nợ quá hạn lớn.</p>
+
+                  <h4>CĂN CỨ / ĐIỂM KIỂM SOÁT</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li>Với hóa đơn từ 05 triệu đồng trở lên, cần kiểm điều kiện thanh toán không dùng tiền mặt theo điểm b, c khoản 1 Điều 9 Nghị định 320/2025/NĐ-CP.</li>
+                      <li>Nếu hàng chưa về kho nhưng hóa đơn đã về, cần cân nhắc theo dõi hàng mua đang đi đường thay vì ghi tăng tồn kho thực tế.</li>
+                      <li>Nếu doanh thu đã ghi nhận nhưng thiếu phiếu xuất kho/giá vốn, BCTC có thể sai lợi nhuận và tồn kho.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <div class="case-subgroup-heading skill-section-reporting">
+                <span>Financial Statement Reviewer</span>
+                <p>Rà logic BCTC, biến động chỉ tiêu và tài khoản trọng yếu trước khi gửi báo cáo.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="reporting-revenue-up-gross-profit-down">
+                <div class="case-meta">Financial Statement Reviewer · BCTC</div>
+                <h3>Doanh thu tăng 50% nhưng lợi nhuận gộp giảm 20%</h3>
+                <p class="case-question">Báo cáo KQKD quý 3 cho thấy doanh thu tăng 50% so với cùng kỳ, nhưng lợi nhuận gộp giảm 20% và lợi nhuận thuần âm. Cần phân tích nguyên nhân và tài khoản trọng yếu nào trên BCĐSPS?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Chưa nên gửi báo cáo nếu chưa xác minh giá vốn, chi phí bán hàng/tài chính và dự phòng cuối kỳ.</li>
+                    <li>Tỷ lệ giá vốn/doanh thu có thể đã tăng mạnh, ăn mòn toàn bộ lợi nhuận gộp.</li>
+                    <li>Cần rà TK 632, 641, 642, 635, 521, 229, 352 và TK 131.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="reporting-revenue-up-gross-profit-down-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="reporting-revenue-up-gross-profit-down-report" hidden>
+                  <h4>KẾT LUẬN NHANH</h4>
+                  <ul>
+                    <li><strong>Mức độ cần kiểm tra:</strong> Rất cao vì cấu trúc lợi nhuận đang bị phá vỡ.</li>
+                    <li><strong>Có thể gửi/nộp báo cáo ngay không:</strong> Chưa. Cần xác minh ít nhất 3 vùng rủi ro lớn.</li>
+                    <li><strong>3 vùng rủi ro:</strong> Giá vốn tăng vượt kiểm soát; chi phí 641/635 bùng nổ; trích lập dự phòng 229/352 lớn cuối kỳ.</li>
+                  </ul>
+
+                  <h4>TÓM TẮT DỮ LIỆU</h4>
+                  <div class="report-facts">
+                    <span>Loại báo cáo: BCKQKD quý 3</span>
+                    <span>Doanh thu: Tăng 50% so với cùng kỳ</span>
+                    <span>Lợi nhuận gộp: Giảm 20%</span>
+                    <span>Lợi nhuận thuần: Âm</span>
+                    <span>Dữ liệu cần bổ sung: BCKQKD cùng kỳ, BCĐSPS quý 3, sổ chi tiết TK 632/641/642/635</span>
+                  </div>
+
+                  <h4>KIỂM TRA LOGIC BÁO CÁO</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Nội dung kiểm</th>
+                          <th>Rủi ro</th>
+                          <th>Nhận xét</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Doanh thu tăng nhưng lợi nhuận gộp giảm</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Tỷ lệ GVHB/DT tăng mạnh, nghi ngờ giá vốn vượt kiểm soát.</td>
+                        </tr>
+                        <tr>
+                          <td>Lợi nhuận gộp dương nhưng lợi nhuận thuần âm</td>
+                          <td><span class="status-risk">Cao</span></td>
+                          <td>Chi phí dưới lợi nhuận gộp như 641/642/635 có thể tăng bất thường.</td>
+                        </tr>
+                        <tr>
+                          <td>Doanh thu tăng kéo theo phải thu/tồn kho</td>
+                          <td><span class="status-risk">Cần kiểm</span></td>
+                          <td>Cần đối chiếu TK 131, tồn kho và dòng tiền thu khách hàng.</td>
+                        </tr>
+                        <tr>
+                          <td>Kết chuyển TK 911</td>
+                          <td><span class="status-risk">Cần kiểm</span></td>
+                          <td>Cần xác nhận kết chuyển doanh thu, chi phí và xác định kết quả hoàn tất.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>NGUYÊN NHÂN CỐT LÕI CẦN SOÁT XÉT</h4>
+                  <ol>
+                    <li><strong>Giá vốn tăng vượt kiểm soát:</strong> Kiểm TK 632, hao hụt, chi phí vượt mức, khuyến mại có điều kiện và dự phòng giảm giá hàng tồn kho TK 2294.</li>
+                    <li><strong>Doanh thu thuần thấp hơn doanh thu gộp:</strong> Rà TK 521 nếu có chiết khấu thương mại, giảm giá hàng bán hoặc hàng bán bị trả lại.</li>
+                    <li><strong>Chi phí bán hàng bùng nổ:</strong> Rà TK 6417, 6418, hoa hồng, vận chuyển, quảng cáo, khuyến mại.</li>
+                    <li><strong>Chi phí tài chính lớn:</strong> Rà TK 635, lãi vay, chiết khấu thanh toán và lỗ tỷ giá.</li>
+                    <li><strong>Dự phòng nợ xấu tăng:</strong> Rà TK 6426/2293 nếu nới lỏng chính sách bán chịu làm TK 131 tăng mạnh.</li>
+                  </ol>
+
+                  <h4>TÀI KHOẢN TRỌNG YẾU TRÊN BCĐSPS</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Nhóm</th>
+                          <th>Tài khoản</th>
+                          <th>Dấu hiệu nguy hiểm</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Doanh thu</td>
+                          <td>511, 521</td>
+                          <td>TK 521 phát sinh lớn làm doanh thu thuần thấp hơn tăng trưởng danh nghĩa.</td>
+                        </tr>
+                        <tr>
+                          <td>Giá vốn</td>
+                          <td>632</td>
+                          <td>GVHB tăng nhanh hơn doanh thu, có hao hụt hoặc giá vốn sai.</td>
+                        </tr>
+                        <tr>
+                          <td>Tồn kho</td>
+                          <td>152, 154, 155, 156</td>
+                          <td>Tồn kho tăng trong khi doanh thu tăng, nghi xuất thiếu giá vốn.</td>
+                        </tr>
+                        <tr>
+                          <td>Chi phí bán hàng/quản lý</td>
+                          <td>641, 642, 6426</td>
+                          <td>Chi phí tăng đột biến, dự phòng nợ khó đòi tăng mạnh.</td>
+                        </tr>
+                        <tr>
+                          <td>Chi phí tài chính</td>
+                          <td>635</td>
+                          <td>Lãi vay, chiết khấu thanh toán hoặc lỗ tỷ giá tăng bất thường.</td>
+                        </tr>
+                        <tr>
+                          <td>Dự phòng</td>
+                          <td>2293, 2294, 3521</td>
+                          <td>Trích lập lớn cuối kỳ có thể làm lợi nhuận thuần âm.</td>
+                        </tr>
+                        <tr>
+                          <td>Công nợ</td>
+                          <td>131</td>
+                          <td>Phải thu tăng nhanh theo doanh thu, rủi ro doanh thu ảo hoặc khó thu.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>VIỆC CẦN LÀM TRƯỚC KHI GỬI/NỘP BÁO CÁO</h4>
+                  <ol>
+                    <li>In BCĐSPS và kéo sổ chi tiết TK 632, 641, 642, 635 để xác định tài khoản tăng bất thường nhất.</li>
+                    <li>Kiểm số dư TK 229, TK 352 đầu kỳ và cuối kỳ, tính số trích lập thêm trong quý.</li>
+                    <li>Đối chiếu TK 521 với chính sách chiết khấu, giảm giá, hàng bán bị trả lại.</li>
+                    <li>Kiểm TK 131 và tuổi nợ nếu doanh thu tăng mạnh nhưng dòng tiền không tương ứng.</li>
+                  </ol>
+
+                  <h4>ĐỀ XUẤT QUÉT FILE TỰ ĐỘNG</h4>
+                  <p>Tải lên BCĐSPS quý 3 và BCKQKD quý 3 so với cùng kỳ dạng Excel. Có thể dùng Python/pandas để tính tỷ lệ GVHB/DT, CP641/DT, CP642/DT, CP635/DT, lọc tài khoản biến động trên 20% và xuất danh sách cảnh báo.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-group" data-case-group="legal-control">
+            <div class="case-group-header">
+              <div>
+                <span class="case-group-index">Nhóm 09</span>
+                <h3>Pháp lý và căn cứ quy định</h3>
+                <p>Nhóm này tách riêng phần tra cứu căn cứ, phân định vùng rõ/vùng xám và xây luận cứ cho case kế toán - thuế khó.</p>
+              </div>
+              <div class="case-skill-list">
+                <span class="skill-pill-legal">Legal Researcher</span>
+              </div>
+            </div>
+            <div class="case-grid">
+              <div class="case-subgroup-heading skill-section-legal">
+                <span>Legal Researcher</span>
+                <p>Tra cứu căn cứ, phân định vùng rõ/vùng xám, xây luận cứ và action plan cho tình huống kế toán - thuế khó.</p>
+              </div>
+
+              <article class="case-card featured-case" data-case-id="legal-director-personal-payment-50m">
+                <div class="case-meta">Legal Researcher · Thanh toán hộ</div>
+                <h3>Giám đốc thanh toán hộ công ty 50 triệu</h3>
+                <p class="case-question">Giám đốc công ty TNHH MTV dùng tiền cá nhân thanh toán khoản mua hàng 50 triệu cho công ty, sau đó công ty chuyển khoản trả lại. Khoản chi có được tính chi phí TNDN không? Có rủi ro TNCN/rút vốn không?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Chi phí có thể được trừ nếu giám đốc thanh toán không dùng tiền mặt cho nhà cung cấp và công ty hoàn trả bằng chuyển khoản.</li>
+                    <li>Công ty chuyển khoản trả lại giám đốc không tự động thay thế chứng từ thanh toán gốc với nhà cung cấp.</li>
+                    <li>Cần quy chế/ủy quyền thanh toán hộ, giấy đề nghị thanh toán, sao kê cá nhân và hạch toán qua TK 3388.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="legal-director-personal-payment-50m-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="legal-director-personal-payment-50m-report" hidden>
+                  <h4>TRẢ LỜI TRỰC TIẾP</h4>
+                  <ul>
+                    <li><strong>Được tính chi phí TNDN:</strong> Có, nếu đủ hóa đơn, có quy chế/ủy quyền thanh toán hộ, người thanh toán hộ dùng phương thức không tiền mặt và công ty hoàn trả phù hợp.</li>
+                    <li><strong>VAT đầu vào:</strong> Có thể khấu trừ nếu chứng minh được cả chiều giám đốc thanh toán cho nhà cung cấp và chiều công ty hoàn trả cho giám đốc đều đúng điều kiện.</li>
+                    <li><strong>Rủi ro TNCN:</strong> Khoản hoàn ứng đúng bản chất không phải thu nhập chịu thuế, nhưng dễ bị soi nếu bị hiểu thành rút vốn, cho vay 0% hoặc giao dịch nội bộ treo lâu.</li>
+                  </ul>
+
+                  <h4>PHÂN ĐỊNH CHỦ THỂ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Chủ thể</th>
+                          <th>Rủi ro</th>
+                          <th>Bản chất cần chứng minh</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Công ty TNHH MTV</td>
+                          <td>Bị loại chi phí TNDN/VAT nếu thiếu điều kiện thanh toán hộ.</td>
+                          <td>Đây là giao dịch mua hàng của công ty, không phải chi cá nhân.</td>
+                        </tr>
+                        <tr>
+                          <td>Giám đốc cá nhân</td>
+                          <td>Bị nghi rút vốn, hoàn ứng không rõ bản chất hoặc phát sinh giao dịch liên kết.</td>
+                          <td>Giám đốc chỉ thanh toán hộ theo ủy quyền và được công ty hoàn trả.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>ĐIỀU KIỆN HỒ SƠ CẦN CÓ</h4>
+                  <ul>
+                    <li>Hóa đơn GTGT hoặc chứng từ mua hàng mang tên, mã số thuế công ty.</li>
+                    <li>Quy chế tài chính nội bộ hoặc quyết định cho phép giám đốc/người lao động thanh toán hộ.</li>
+                    <li>Sao kê tài khoản cá nhân chứng minh giám đốc chuyển khoản cho nhà cung cấp.</li>
+                    <li>Giấy đề nghị thanh toán/hoàn ứng, kèm chứng từ gốc và phê duyệt nội bộ.</li>
+                    <li>Ủy nhiệm chi công ty chuyển khoản hoàn trả cho giám đốc.</li>
+                  </ul>
+
+                  <h4>BÚT TOÁN KẾ TOÁN ĐỊNH HƯỚNG</h4>
+                  <div class="report-code">
+                    <span>Khi giám đốc mang chứng từ về đề nghị thanh toán: Nợ TK 156/642/641..., Nợ TK 1331 / Có TK 3388 - chi tiết Giám đốc.</span>
+                    <span>Khi công ty chuyển khoản hoàn trả: Nợ TK 3388 - chi tiết Giám đốc / Có TK 112.</span>
+                    <span>Không ưu tiên TK 141 nếu công ty không tạm ứng tiền trước cho giám đốc.</span>
+                  </div>
+
+                  <h4>ĐIỂM MÙ CƠ QUAN THUẾ CÓ THỂ SOI</h4>
+                  <ol>
+                    <li>Giám đốc trả tiền mặt cho nhà cung cấp nhưng công ty lại nghĩ chuyển khoản hoàn trả là đủ điều kiện.</li>
+                    <li>Không có quy chế/ủy quyền thanh toán hộ trước hoặc tại thời điểm giao dịch.</li>
+                    <li>Không lưu sao kê tài khoản cá nhân của giám đốc nên không chứng minh được dòng tiền gốc.</li>
+                    <li>TK 3388 treo lâu, số dư lớn, dễ bị đặt câu hỏi về bản chất vay/mượn hoặc giao dịch liên kết.</li>
+                  </ol>
+
+                  <h4>ACTION PLAN 5 BƯỚC</h4>
+                  <ol>
+                    <li>Xác minh giám đốc đã chuyển khoản từ tài khoản cá nhân cho nhà cung cấp.</li>
+                    <li>Ban hành hoặc bổ sung quy chế/ủy quyền thanh toán hộ phù hợp.</li>
+                    <li>Lập giấy đề nghị thanh toán kèm hóa đơn, sao kê cá nhân và phê duyệt nội bộ.</li>
+                    <li>Công ty chuyển khoản hoàn trả đúng số tiền vào tài khoản cá nhân giám đốc.</li>
+                    <li>Hạch toán qua TK 3388, lưu trọn bộ hồ sơ theo từng giao dịch.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điểm c2 khoản 1 Điều 9 Nghị định 320/2025/NĐ-CP:</strong> cần kiểm điều kiện chi phí được trừ khi người lao động thanh toán hộ.</li>
+                      <li><strong>Điểm i khoản 2 Điều 26 Nghị định 181/2025/NĐ-CP:</strong> cần kiểm điều kiện khấu trừ VAT khi doanh nghiệp thanh toán lại cho người lao động bằng hình thức không dùng tiền mặt.</li>
+                      <li><strong>Điều 3 và khoản 21 Điều 4 Luật Thuế TNCN:</strong> dùng để phân định hoàn ứng không phải thu nhập chịu thuế và rút lợi nhuận hợp pháp của chủ công ty TNHH MTV.</li>
+                      <li><strong>Khoản 3, 4, 5, 6 Điều 77 Luật Doanh nghiệp:</strong> dùng để cảnh báo rủi ro rút vốn và yêu cầu tách bạch tài sản cá nhân với tài sản công ty.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+              <article class="case-card featured-case" data-case-id="legal-year-end-party-family-guests">
+                <div class="case-meta">Legal Researcher · Vùng xám phúc lợi</div>
+                <h3>Tiệc tất niên có mời vợ/chồng nhân viên</h3>
+                <p class="case-question">Công ty tổ chức tiệc tất niên 100 triệu, có hóa đơn đỏ và mời kèm vợ/chồng nhân viên tham dự. Chi phí phần người thân có được tính TNDN không? Có bị tính TNCN không?</p>
+                <div class="case-summary">
+                  <strong>Kết luận rút gọn</strong>
+                  <ul>
+                    <li>Chi phí tiệc tất niên cho người lao động có thể được trừ nếu đủ điều kiện, trong ngưỡng phúc lợi và thanh toán đúng.</li>
+                    <li>Phần vợ/chồng/người thân đi kèm là vùng xám: luật không cấm rõ, nhưng cũng không cho phép đích danh.</li>
+                    <li>Chiến lược hồ sơ là đóng khung toàn bộ sự kiện thành phúc lợi tập thể, không cá nhân hóa lợi ích từng người.</li>
+                  </ul>
+                </div>
+                <button class="case-report-toggle" type="button" aria-expanded="false" aria-controls="legal-year-end-party-family-guests-report">
+                  Xem phân tích chi tiết
+                </button>
+
+                <div class="case-full-report" id="legal-year-end-party-family-guests-report" hidden>
+                  <h4>TRẢ LỜI TRỰC TIẾP</h4>
+                  <ul>
+                    <li><strong>TNDN:</strong> Có thể tính chi phí nếu tổng phúc lợi không vượt 1 tháng lương bình quân, có hóa đơn và thanh toán không dùng tiền mặt.</li>
+                    <li><strong>Phần người thân:</strong> Vùng xám, cần hồ sơ nội bộ tốt để bảo vệ bản chất phúc lợi tập thể.</li>
+                    <li><strong>TNCN:</strong> Không nên tính vào thu nhập từng cá nhân nếu là sự kiện tập thể và không xác định mức hưởng riêng cho từng người.</li>
+                  </ul>
+
+                  <h4>PHẦN ĐƯỢC KẾT LUẬN RÕ</h4>
+                  <div class="report-table-wrap">
+                    <table class="report-table">
+                      <thead>
+                        <tr>
+                          <th>Điều kiện</th>
+                          <th>Yêu cầu</th>
+                          <th>Rủi ro nếu thiếu</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Ngưỡng phúc lợi</td>
+                          <td>Tổng chi phúc lợi không vượt 1 tháng lương bình quân.</td>
+                          <td>Phần vượt bị loại chi phí.</td>
+                        </tr>
+                        <tr>
+                          <td>Hóa đơn và thanh toán</td>
+                          <td>Hóa đơn hợp pháp, thanh toán không dùng tiền mặt với khoản 100 triệu.</td>
+                          <td>Rủi ro bị loại chi phí/VAT.</td>
+                        </tr>
+                        <tr>
+                          <td>Bản chất tập thể</td>
+                          <td>Sự kiện phục vụ người lao động, gắn kết tập thể, không chia lợi ích riêng.</td>
+                          <td>Rủi ro bị coi là lợi ích cá nhân hoặc chi không liên quan SXKD.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <h4>VÙNG XÁM CẦN NÓI THẲNG</h4>
+                  <div class="report-note">
+                    <ul>
+                          <li>NotebookLM chưa tìm thấy điều khoản nêu đích danh vợ/chồng, người thân hoặc thành viên gia đình tham dự tiệc công ty trong quy định TNDN/TNCN.</li>
+                      <li>Vì vậy không nên khẳng định quá mạnh là phần người thân chắc chắn được trừ trong mọi trường hợp.</li>
+                      <li>Cách trình bày an toàn là: có thể bảo vệ nếu đóng khung bằng quy chế phúc lợi, quyết định tổ chức và hồ sơ thanh toán đầy đủ.</li>
+                    </ul>
+                  </div>
+
+                  <h4>CHIẾN LƯỢC HỒ SƠ BẢO VỆ 100 TRIỆU</h4>
+                  <ol>
+                    <li>Ban hành quy chế chi tiêu/phúc lợi nêu rõ tiệc tất niên cho người lao động và người đi kèm được mời theo quyết định ban lãnh đạo.</li>
+                    <li>Lập quyết định tổ chức sự kiện ghi mục đích, đối tượng tham dự, tổng kinh phí và nguồn chi phí phúc lợi.</li>
+                    <li>Lập danh sách tham dự theo hướng tổng hợp: số nhân viên, số khách mời gia đình, không quy đổi lợi ích riêng từng người.</li>
+                    <li>Hóa đơn nhà hàng mang tên, MST công ty và thanh toán chuyển khoản toàn bộ.</li>
+                    <li>Trước khi hạch toán, tính lại tổng chi phúc lợi cả năm so với 1 tháng lương bình quân.</li>
+                  </ol>
+
+                  <h4>CĂN CỨ PHÁP LÝ TỪ NOTEBOOKLM</h4>
+                  <div class="report-note">
+                    <ul>
+                      <li><strong>Điểm d khoản 4 Điều 10 Nghị định 320/2025/NĐ-CP:</strong> dùng để xác định giới hạn chi phúc lợi không vượt 1 tháng lương bình quân.</li>
+                      <li><strong>Khoản 1 Điều 9 Nghị định 320/2025/NĐ-CP:</strong> điều kiện chung về chi phí liên quan hoạt động SXKD, hóa đơn và thanh toán không dùng tiền mặt.</li>
+                      <li><strong>Khoản 2 Điều 3 Luật Thuế TNCN 109/2025/QH15:</strong> nguyên tắc lợi ích bằng tiền/không bằng tiền có thể là thu nhập chịu thuế, cần tránh cá nhân hóa lợi ích.</li>
+                      <li><strong>Khoản 3 Điều 10 Nghị định 320/2025/NĐ-CP:</strong> lưu ý khoản chi từ quỹ khen thưởng, phúc lợi có thể không được trừ.</li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <footer id="contact" class="contact-footer">
+        <div>
+          <span class="eyebrow">Candidate Profile</span>
+          <h2>Về ứng viên</h2>
+          <p>KetoanAI là dự án cá nhân của <strong>Lê Thị Diệu Minh</strong>, tập trung vào cách ứng dụng AI để chuẩn hóa quy trình kiểm chứng từ, rà rủi ro thuế, đối chiếu số liệu và hỗ trợ khóa sổ kế toán.</p>
+        </div>
+        <div class="contact-card" aria-label="Thông tin liên hệ ứng viên">
+          <span>Liên hệ</span>
+          <a href="mailto:dieuminh2268@gmail.com">dieuminh2268@gmail.com</a>
+          <a href="tel:+84934528652">0934528652</a>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/main.js?v=20260513-8"></script>
+  </body>
+</html>
